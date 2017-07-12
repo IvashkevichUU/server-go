@@ -130,9 +130,9 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 		var fio string
 		var info string
 		var score uint
-		err = rows.Scan(&fio)
+		err = rows.Scan(&id, &fio, &info, &score)
 		PanicOnErr(err)
-		fmt.Println("rows.Next fio: ", fio)
+
 		fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
 	}
 	rows.Close()
