@@ -100,10 +100,8 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 		"test student",
 		"87",
 	).Scan(&lastInsertId)
-	if err != nil {
-		PanicOnErr(err)
-	}
-	fmt.Println("Insert - LastInsertId: ", lastInsertId)
+
+	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
 
 	PrintByID(int64(lastInsertId))
 }
