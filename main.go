@@ -70,13 +70,22 @@ func PanicOnErr(err error) {
 
 // PrintByID print student by id
 func PrintByID(id int64) {
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
+
 	var fio string
 	var info sql.NullString
 	// var info string
 	var score int
 	row := db.QueryRow("SELECT fio, info, score FROM students WHERE id = $1", id)
 	// fmt.Println(row)
-	err := row.Scan(&fio, &info, &score)
+	err = row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
 	fmt.Println("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
 }
