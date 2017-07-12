@@ -17,31 +17,6 @@ var (
 
 func main() {
 
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	connection += " sslmode=require"
-
-	db, err := sql.Open("postgres", connection)
-	if err != nil {
-		log.Println(err)
-	}
-
-	// проверяем что подключение реально произошло ( делаем запрос )
-	err = db.Ping()
-	PanicOnErr(err)
-
-	// итерируемся по многим записям
-	// Exec исполняет запрос и возвращает записи
-	rows, err := db.Query("SELECT * FROM students")
-	PanicOnErr(err)
-	for rows.Next() {
-		var fio string
-		err = rows.Scan(&fio)
-		PanicOnErr(err)
-		fmt.Println("rows.Next fio: ", fio)
-	}
-	rows.Close()
-
 	m := martini.Classic()
 	m.Get("/", func() string {
 		return "Hello World"
@@ -49,7 +24,7 @@ func main() {
 	m.Get("/db", openDb)
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
-	//m.Get("/getstudents", getStudents)
+	m.Get("/getstudents", getStudents)
 	m.Get("/hello", HelloServer)
 
 	m.Run()
@@ -130,4 +105,35 @@ func createStudent() {
 	fmt.Println("Insert - LastInsertId: ", lastID)
 
 	PrintByID(lastID)
+}
+
+func getStudents(w http.ResponseWriter, r *http.Request) {
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
+
+	// проверяем что подключение реально произошло ( делаем запрос )
+	err = db.Ping()
+	PanicOnErr(err)
+
+	// итерируемся по многим записям
+	// Exec исполняет запрос и возвращает записи
+	rows, err := db.Query("SELECT * FROM students")
+	PanicOnErr(err)
+	for rows.Next() {
+		var id uint
+		var fio string
+		var info string
+		var score uint
+		err = rows.Scan(&fio)
+		PanicOnErr(err)
+		fmt.Println("rows.Next fio: ", fio)
+		fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
+	}
+	rows.Close()
 }
