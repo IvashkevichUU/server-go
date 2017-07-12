@@ -107,7 +107,15 @@ func PrintByID(id int64) {
 }
 
 func createStudent() {
-	var err error
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
+
 	// Exec исполняет запрос и возвращает сколько строк было затронуто и последнйи ИД вставленной записи
 	// символ ? является placeholder-ом. все последующие значения авто-экранируются и подставляются с правильным кавычками
 	var lastID int64
