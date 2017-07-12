@@ -81,7 +81,7 @@ func PrintByID(id int64) {
 	fmt.Println("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
 }
 
-func createStudent() {
+func createStudent(w http.ResponseWriter, r *http.Request) {
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
 	connection += " sslmode=require"
@@ -93,16 +93,20 @@ func createStudent() {
 
 	// Exec исполняет запрос и возвращает сколько строк было затронуто и последнйи ИД вставленной записи
 	// символ ? является placeholder-ом. все последующие значения авто-экранируются и подставляются с правильным кавычками
-	var lastID int64
-	err = db.QueryRow(
+
+	result, err := db.Exec(
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
-		"Ivan Ivanov",
-		"info studenta",
-		"23",
-	).Scan(&lastID)
+		"Oleg Petrov",
+		"test student",
+		"87",
+	)
+
+	affected, err := result.RowsAffected()
+	PanicOnErr(err)
+	lastID, err := result.LastInsertId()
 	PanicOnErr(err)
 
-	fmt.Println("Insert - LastInsertId: ", lastID)
+	fmt.Fprintf(w, "Insert - RowsAffected", affected, "LastInsertId: ", lastID)
 
 	PrintByID(lastID)
 }
