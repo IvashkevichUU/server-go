@@ -2,11 +2,16 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 	"os"
 
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
+)
+
+var (
+	db *sql.DB
 )
 
 func main() {
@@ -29,4 +34,16 @@ func openDb() *sql.DB {
 	}
 
 	return db
+}
+
+func createDb() {
+	result, err := db.Exec("CREATE TABLE IF NOT EXISTS students (id SERIAL NOT NULL, fio CHARACTER VARYING(300) NOT NULL, info TEXT NOT NULL, score INTEGER NOT NULL )")
+	if err != nil {
+		log.Println(err)
+	}
+	affected, err := result.RowsAffected()
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Sprintf("Update - RowsAffected", affected)
 }
