@@ -20,6 +20,7 @@ func main() {
 		return "Hello World"
 	})
 	m.Get("/db", openDb)
+	m.Get("/createdb", createDb)
 	m.Run()
 }
 
