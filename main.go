@@ -94,19 +94,17 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 	// Exec исполняет запрос и возвращает сколько строк было затронуто и последнйи ИД вставленной записи
 	// символ ? является placeholder-ом. все последующие значения авто-экранируются и подставляются с правильным кавычками
 
-	result, err := db.Exec(
+	result, err := db.Query(
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
 		"Oleg Petrov",
 		"test student",
 		"87",
 	)
-
-	id, err := result.LastInsertId()
-	PanicOnErr(err)
-	affected, err := result.RowsAffected()
+	var id int64
+	err = result.Scan(&id)
 	PanicOnErr(err)
 
-	fmt.Fprintf(w, "Insert - RowsAffected", affected, "LastInsertId: ", id)
+	fmt.Fprintf(w, "Insert -   LastInsertId: ", id)
 
 	PrintByID(id)
 }
