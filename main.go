@@ -101,14 +101,14 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 		"87",
 	)
 
+	id, err := result.LastInsertId()
+	PanicOnErr(err)
 	affected, err := result.RowsAffected()
 	PanicOnErr(err)
-	lastID, err := result.LastInsertId()
-	PanicOnErr(err)
 
-	fmt.Fprintf(w, "Insert - RowsAffected", affected, "LastInsertId: ", lastID)
+	fmt.Fprintf(w, "Insert - RowsAffected", affected, "LastInsertId: ", id)
 
-	PrintByID(lastID)
+	PrintByID(id)
 }
 
 func getStudents(w http.ResponseWriter, r *http.Request) {
