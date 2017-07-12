@@ -41,12 +41,10 @@ func createDb() {
 	if err != nil {
 		log.Println(err)
 	}
-
 	affected, err := result.RowsAffected()
 
 	if err != nil {
 		log.Println(err)
 	}
-
 	fmt.Sprintf("Update - RowsAffected", affected)
 }
