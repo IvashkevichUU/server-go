@@ -87,7 +87,8 @@ func PrintByID(id int64) {
 	// fmt.Println(row)
 	err = row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
-	fmt.Println("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
+	var w http.ResponseWriter
+	fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
 }
 
 func createStudent(w http.ResponseWriter, r *http.Request) {
