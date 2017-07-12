@@ -120,8 +120,10 @@ func createStudent() {
 	// символ ? является placeholder-ом. все последующие значения авто-экранируются и подставляются с правильным кавычками
 	var lastID int64
 	err = db.QueryRow(
-		"INSERT INTO students (fio, score) VALUES ($1, 0) RETURNING id",
+		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
 		"Ivan Ivanov",
+		"info studenta",
+		"23",
 	).Scan(&lastID)
 	PanicOnErr(err)
 
