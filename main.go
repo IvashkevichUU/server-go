@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/alfg/blockchain"
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
-	"github.com/alfg/blockchain"
 )
 
 var (
@@ -26,31 +26,23 @@ func main() {
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
 	m.Get("/getstudents", getStudents)
+	m.Get("/getstudents/{id}", PrintByID)
 	m.Get("/hello", HelloServer)
 	m.Get("/blockchain", Blockchains)
 
 	m.Run()
 }
 
-
-func Blockchains() {
+func Blockchains(w http.ResponseWriter, r *http.Request) {
 
 	c, err := blockchain.New()
-	resp, err := c.GetAddress("1MDUoxL1bGvMxhuoDYx6i11ePytECAk9QK")
+	resp, err := c.GetAddress("1AJbsFZ64EpEfS5UAjAfcUG8pH8Jn3rn1F")
 
 	if err != nil {
 		log.Println(err)
 	}
 
-	fmt.Sprintf(resp.Hash160, "\n")
-
-	fmt.Sprintf(resp.Address)
-
-	fmt.Sprintln(resp.NTx)
-	fmt.Sprintln(resp.TotalReceived)
-	fmt.Sprintln(resp.TotalSent)
-	fmt.Sprintln(resp.FinalBalance)
-
+	fmt.Fprintf(w, "Hash160: %s, Address: %s, NTx: %d, TotalReceived: %d, TotalSent: %d, FinalBalance: %d\n", resp.Hash160, resp.Address, resp.NTx, resp.TotalReceived, resp.TotalSent, resp.FinalBalance)
 }
 
 func openDb() *sql.DB {
@@ -143,7 +135,6 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println(err)
 	}
-
 
 	err = db.Ping()
 	PanicOnErr(err)
