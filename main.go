@@ -36,15 +36,20 @@ func main() {
 func Blockchains(w http.ResponseWriter, r *http.Request) {
 
 	c, err := blockchain.New()
-	resp, err := c.GetAddress("162FjqU7RYdojnejCDe6zrPDUpaLcv9Hhq")
+	resp, err := c.GetAddress("1MDUoxL1bGvMxhuoDYx6i11ePytECAk9QK")
 
 	if err != nil {
 		log.Println(err)
 	}
 
-	fmt.Fprintf(w, string(resp.Hash160), "\n")
+	fmt.Fprintf(w, string(resp.Hash160))
 
 	fmt.Fprintf(w, resp.Address)
+
+	fmt.Fprintf(w, string(resp.NTx))
+	fmt.Fprintf(w, string(resp.TotalReceived))
+	fmt.Fprintf(w, string(resp.TotalSent))
+	fmt.Fprintf(w, string(resp.FinalBalance))
 
 }
 
