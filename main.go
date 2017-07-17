@@ -9,6 +9,7 @@ import (
 
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
+	"github.com/alfg/blockchain"
 )
 
 var (
@@ -26,8 +27,37 @@ func main() {
 	m.Get("/createstudent", createStudent)
 	m.Get("/getstudents", getStudents)
 	m.Get("/hello", HelloServer)
+	m.Get("/blockchain", Blockchains)
 
 	m.Run()
+}
+
+
+func Blockchains(w http.ResponseWriter, r *http.Request) {
+
+	c, e := blockchain.New()
+	resp, e := c.GetAddress("162FjqU7RYdojnejCDe6zrPDUpaLcv9Hhq")
+
+	if e != nil {
+			fmt.Sprintf("Error: %q", e)
+	}
+
+	fmt.Fprintf(w, string(resp.Hash160))
+
+	fmt.Fprintf(w, resp.Address)
+	fmt.Fprintf(w, string(resp.NTx))
+	fmt.Fprintf(w, string(resp.TotalReceived))
+	fmt.Fprintf(w, string(resp.TotalSent))
+	fmt.Fprintf(w, string(resp.FinalBalance))
+
+	for i := range resp.Txs {
+		fmt.Fprintf(w, string(resp.Txs[i].Result))
+
+		for j := range resp.Txs[i].Inputs {
+			fmt.Fprintf(w, string(resp.Txs[i].Inputs[j].Sequence))
+		}
+	}
+
 }
 
 func openDb() *sql.DB {
@@ -61,14 +91,12 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Привет %s!\n", r.URL.Path[1:])
 }
 
-//PanicOnErr panics on error
 func PanicOnErr(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
 
-// PrintByID print student by id
 func PrintByID(id int64) {
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
@@ -100,8 +128,6 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
-	// Exec исполняет запрос и возвращает сколько строк было затронуто и последнйи ИД вставленной записи
-	// символ ? является placeholder-ом. все последующие значения авто-экранируются и подставляются с правильным кавычками
 	lastInsertId := 0
 	err = db.QueryRow(
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
@@ -125,12 +151,10 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
-	// проверяем что подключение реально произошло ( делаем запрос )
+
 	err = db.Ping()
 	PanicOnErr(err)
 
-	// итерируемся по многим записям
-	// Exec исполняет запрос и возвращает записи
 	rows, err := db.Query("SELECT * FROM students")
 	PanicOnErr(err)
 	for rows.Next() {

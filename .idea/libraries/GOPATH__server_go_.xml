@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;server-go&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Server-Heroku" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../serv" />
+      <root url="file://$PROJECT_DIR$/../awesomeProject" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../PingPong" />
+      <root url="file://$PROJECT_DIR$/../hello" />
+      <root url="file://$PROJECT_DIR$/../HelloWorld" />
+      <root url="file://$PROJECT_DIR$/../blc" />
+      <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../api" />
+      <root url="file://$PROJECT_DIR$/../timer" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../Server-Heroku" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../serv" />
+      <root url="file://$PROJECT_DIR$/../awesomeProject" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../PingPong" />
+      <root url="file://$PROJECT_DIR$/../hello" />
+      <root url="file://$PROJECT_DIR$/../HelloWorld" />
+      <root url="file://$PROJECT_DIR$/../blc" />
+      <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../api" />
+      <root url="file://$PROJECT_DIR$/../timer" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
