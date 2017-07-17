@@ -42,7 +42,7 @@ func Blockchains(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
-	fmt.Fprintf(w, string(resp.Hash160))
+	fmt.Fprintf(w, string(resp.Hash160), "\n")
 
 	fmt.Fprintf(w, resp.Address)
 
