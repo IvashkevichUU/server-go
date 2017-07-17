@@ -33,7 +33,7 @@ func main() {
 }
 
 
-func Blockchains(w http.ResponseWriter, r *http.Request) {
+func Blockchains() {
 
 	c, err := blockchain.New()
 	resp, err := c.GetAddress("1MDUoxL1bGvMxhuoDYx6i11ePytECAk9QK")
@@ -42,14 +42,14 @@ func Blockchains(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
-	fmt.Fprintf(w, string(resp.Hash160), "\n")
+	fmt.Sprintf(resp.Hash160, "\n")
 
-	fmt.Fprintf(w, resp.Address)
+	fmt.Sprintf(resp.Address)
 
-	fmt.Fprintln(w, resp.NTx)
-	fmt.Fprintln(w, resp.TotalReceived)
-	fmt.Fprintln(w, resp.TotalSent)
-	fmt.Fprintln(w, resp.FinalBalance)
+	fmt.Sprintln(resp.NTx)
+	fmt.Sprintln(resp.TotalReceived)
+	fmt.Sprintln(resp.TotalSent)
+	fmt.Sprintln(resp.FinalBalance)
 
 }
 
