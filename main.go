@@ -82,7 +82,7 @@ func PanicOnErr(err error) {
 	}
 }
 
-func PrintByID(w http.ResponseWriter, r http.Request, id int64) {
+func PrintByID(id int64) {
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
 	connection += " sslmode=require"
@@ -100,7 +100,7 @@ func PrintByID(w http.ResponseWriter, r http.Request, id int64) {
 	// fmt.Println(row)
 	err = row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
-	fmt.Fprintf(w, "PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
+	fmt.Println("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
 }
 
 func createStudent(w http.ResponseWriter, r *http.Request) {
