@@ -82,7 +82,7 @@ func PanicOnErr(err error) {
 	}
 }
 
-func PrintByID(id int64) {
+func PrintByID(w http.ResponseWriter, r http.Request, id int64) {
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
 	connection += " sslmode=require"
@@ -100,7 +100,7 @@ func PrintByID(id int64) {
 	// fmt.Println(row)
 	err = row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
-	fmt.Sprintf("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
+	fmt.Fprintf(w, "PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
 }
 
 func createStudent(w http.ResponseWriter, r *http.Request) {
@@ -118,12 +118,13 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
 		"Oleg Petrov",
 		"test student",
-		"87",
+		"85",
 	).Scan(&lastInsertId)
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
 
 	PrintByID(int64(lastInsertId))
+
 }
 
 func getStudents(w http.ResponseWriter, r *http.Request) {
@@ -151,5 +152,6 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
 	}
+	fmt.Fprintf(w, "Open connections: ", db.Stats().OpenConnections)
 	rows.Close()
 }
