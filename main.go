@@ -152,6 +152,6 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
 	}
-	fmt.Fprintf(w, "Open connections: ", db.Stats().OpenConnections)
+	fmt.Fprintln(w, "Open connections: ", db.Stats().OpenConnections)
 	rows.Close()
 }
