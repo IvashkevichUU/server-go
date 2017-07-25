@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/alfg/blockchain"
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
 
@@ -39,23 +38,11 @@ func main() {
 	m.Get("/getstudents", getStudents)
 	m.Get("/getstudents/{id}", PrintByID)
 	m.Get("/hello", HelloServer)
-	m.Get("/blockchain", Blockchains)
+
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
 
 	m.Run()
-}
-
-func Blockchains(w http.ResponseWriter, r *http.Request) {
-
-	c, err := blockchain.New()
-	resp, err := c.GetAddress("1AJbsFZ64EpEfS5UAjAfcUG8pH8Jn3rn1F")
-
-	if err != nil {
-		log.Println(err)
-	}
-
-	fmt.Fprintf(w, "Hash160: %s, Address: %s, NTx: %d, TotalReceived: %d, TotalSent: %d, FinalBalance: %d\n", resp.Hash160, resp.Address, resp.NTx, resp.TotalReceived, resp.TotalSent, resp.FinalBalance)
 }
 
 func openDb() *sql.DB {
