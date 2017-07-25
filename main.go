@@ -13,6 +13,7 @@ import (
 
 	"encoding/json"
 	"io/ioutil"
+	"strconv"
 	"time"
 )
 
@@ -198,8 +199,8 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	PanicOnErr(err)
 	fmt.Fprintln(w, "PrintByID:", id)
 
-	urlSend := "https://apibtc.com/api/create_wallet?token=4e71a0c5cbcf5004cc7977c32b6e917c79c5abda8f4aaceb456626d180f6771f&callback=https://woods.one/api/index.php?ID="
-
+	urlSend := "https://apibtc.com/api/create_wallet?token=4e71a0c5cbcf5004cc7977c32b6e917c79c5abda8f4aaceb456626d180f6771f&callback=https://woods.one/api/index.php?ID=" + strconv.Itoa(id)
+	fmt.Fprintf(w, "Url Send: %s \n", urlSend)
 	spaceClient := http.Client{
 		Timeout: time.Second * 2, // Maximum of 2 secs
 	}
