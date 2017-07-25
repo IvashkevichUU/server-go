@@ -10,6 +10,9 @@ import (
 	"github.com/alfg/blockchain"
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
+
+	"io/ioutil"
+	url2 "net/url"
 )
 
 var (
@@ -30,6 +33,7 @@ func main() {
 	m.Get("/hello", HelloServer)
 	m.Get("/blockchain", Blockchains)
 	m.Get("/createdbpayments", createDbPayment)
+	m.Get("/createpayments", createPayment)
 
 	m.Run()
 }
@@ -158,14 +162,6 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 }
 
 func createDbPayment() {
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	connection += " sslmode=require"
-
-	db, err := sql.Open("postgres", connection)
-	if err != nil {
-		log.Println(err)
-	}
 
 	result, err := db.Exec("CREATE TABLE IF NOT EXISTS payments (id SERIAL NOT NULL, address CHARACTER VARYING(300) NOT NULL, amount FLOAT NOT NULL )")
 	if err != nil {
@@ -177,4 +173,47 @@ func createDbPayment() {
 		log.Println(err)
 	}
 	fmt.Sprintf("Update - RowsAffected", affected)
+}
+
+func createPayment(w http.ResponseWriter, r *http.Request) {
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
+
+	var id int
+	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
+	err = row.Scan(&id)
+	PanicOnErr(err)
+	fmt.Println("PrintByID:", id)
+
+	s := "https://apibtc.com/api/create_wallet?token=TOKEN&callback=my_callback_url"
+
+	u, err := url2.Parse(s)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(u.Scheme)
+
+	res, err := http.Get(u.String())
+	if err != nil {
+		log.Fatal(err)
+	}
+	robots, err := ioutil.ReadAll(res.Body)
+	fmt.Println("ROBOTS:", robots)
+	res.Body.Close()
+
+	lastInsertId := 0
+	err = db.QueryRow(
+		"INSERT INTO payments (address, amount) VALUES ($1, $2) RETURNING id",
+		"1MqyrzuzTfYMLtgKnvWf6Kcinn4bEHRdEt",
+		"0.01",
+	).Scan(&lastInsertId)
+
+	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
+
 }
