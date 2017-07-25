@@ -196,7 +196,7 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
 	err = row.Scan(&id)
 	PanicOnErr(err)
-	fmt.Println("PrintByID:", id)
+	fmt.Fprintln(w, "PrintByID:", id)
 
 	urlSend := "https://apibtc.com/api/create_wallet?token=4e71a0c5cbcf5004cc7977c32b6e917c79c5abda8f4aaceb456626d180f6771f&callback=https://woods.one/api/index.php?ID="
 
@@ -227,10 +227,10 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(jsonErr)
 	}
 
-	fmt.Println(payment1.Success)
-	fmt.Println(payment1.Res["Sign"])
-	fmt.Println(payment1.Res["Adress"])
-	fmt.Println(payment1.Res["Address"])
+	fmt.Fprintln(w, payment1.Success)
+	fmt.Fprintln(w, payment1.Res["Sign"])
+	fmt.Fprintln(w, payment1.Res["Adress"])
+	fmt.Fprintln(w, payment1.Res["Address"])
 
 	lastInsertId := 0
 	err = db.QueryRow(
