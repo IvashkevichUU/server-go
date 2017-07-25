@@ -185,11 +185,11 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
-	//var id int
-	//row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
-	//err = row.Scan(&id)
-	//PanicOnErr(err)
-	//fmt.Println("PrintByID:", id)
+	var id int
+	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
+	err = row.Scan(&id)
+	PanicOnErr(err)
+	fmt.Println("PrintByID:", id)
 
 	s := "https://apibtc.com/api/create_wallet?token=TOKEN&callback=my_callback_url"
 
