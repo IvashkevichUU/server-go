@@ -29,6 +29,7 @@ func main() {
 	m.Get("/getstudents/{id}", PrintByID)
 	m.Get("/hello", HelloServer)
 	m.Get("/blockchain", Blockchains)
+	m.Get("/createdbpayments", createDbPayment)
 
 	m.Run()
 }
@@ -154,4 +155,18 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintln(w, "Open connections: ", db.Stats().OpenConnections)
 	rows.Close()
+}
+
+func createDbPayment() {
+
+	result, err := db.Exec("CREATE TABLE IF NOT EXISTS payments (id SERIAL NOT NULL, address CHARACTER VARYING(300) NOT NULL, amount FLOAT NOT NULL )")
+	if err != nil {
+		log.Println(err)
+	}
+	affected, err := result.RowsAffected()
+
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Sprintf("Update - RowsAffected", affected)
 }

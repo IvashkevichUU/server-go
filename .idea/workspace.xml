@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server-go.exe" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
@@ -18,14 +19,15 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="150" column="23" lean-forward="true" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
+            <state relative-caret-position="354">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#14#157#0" expanded="true" />
-                <marker date="1500453719181" expanded="true" signature="1187:1325" ph="CREATE TABLE... IF" />
-                <marker date="1500453719181" expanded="true" signature="1986:2037" ph="SELECT fio, students" />
-                <marker date="1500453719181" expanded="true" signature="2490:2562" ph="INSERT INTO students... " />
-                <marker date="1500453719181" expanded="true" signature="3038:3060" ph="SELECT * FRO... students" />
+                <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+                <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+                <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+                <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+                <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -71,6 +73,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -143,8 +147,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,7 +166,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Application.Unnamed">
+    <configuration default="true" type="GoAppEngineRunConfiguration" factoryName="Go App Engine">
+      <module name="server-go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <method />
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="server-go" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -221,6 +228,18 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="Unnamed" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="server-go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <filePath value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <package value="server-go" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Go Application.Unnamed" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -229,14 +248,14 @@
     <frame x="-1448" y="-140" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.260745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27148998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14077026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1620186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -265,7 +284,8 @@
     <MESSAGE value="v0.9.8.5" />
     <MESSAGE value="v0.9.8.6" />
     <MESSAGE value="v0.9.8.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.9.8.7" />
+    <MESSAGE value="v0.9.8.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.9.8.8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -278,10 +298,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#157#0" expanded="true" />
-            <marker date="1500453719181" expanded="true" signature="1187:1325" ph="CREATE TABLE... IF" />
-            <marker date="1500453719181" expanded="true" signature="1986:2037" ph="SELECT fio, students" />
-            <marker date="1500453719181" expanded="true" signature="2490:2562" ph="INSERT INTO students... " />
-            <marker date="1500453719181" expanded="true" signature="3038:3060" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
@@ -292,10 +313,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#157#0" expanded="true" />
-            <marker date="1500453719181" expanded="true" signature="1187:1325" ph="CREATE TABLE... IF" />
-            <marker date="1500453719181" expanded="true" signature="1986:2037" ph="SELECT fio, students" />
-            <marker date="1500453719181" expanded="true" signature="2490:2562" ph="INSERT INTO students... " />
-            <marker date="1500453719181" expanded="true" signature="3038:3060" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
@@ -306,10 +328,56 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#157#0" expanded="true" />
-            <marker date="1500453719181" expanded="true" signature="1187:1325" ph="CREATE TABLE... IF" />
-            <marker date="1500453719181" expanded="true" signature="1986:2037" ph="SELECT fio, students" />
-            <marker date="1500453719181" expanded="true" signature="2490:2562" ph="INSERT INTO students... " />
-            <marker date="1500453719181" expanded="true" signature="3038:3060" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#157#0" expanded="true" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#157#0" expanded="true" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#157#0" expanded="true" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
@@ -365,16 +433,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Godeps/Readme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="150" column="23" lean-forward="true" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
+        <state relative-caret-position="354">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#14#157#0" expanded="true" />
-            <marker date="1500453719181" expanded="true" signature="1187:1325" ph="CREATE TABLE... IF" />
-            <marker date="1500453719181" expanded="true" signature="1986:2037" ph="SELECT fio, students" />
-            <marker date="1500453719181" expanded="true" signature="2490:2562" ph="INSERT INTO students... " />
-            <marker date="1500453719181" expanded="true" signature="3038:3060" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="1232:1370" ph="CREATE TABLE... IF" />
+            <marker date="1500969444428" expanded="true" signature="2031:2082" ph="SELECT fio, students" />
+            <marker date="1500969444428" expanded="true" signature="2535:2607" ph="INSERT INTO students... " />
+            <marker date="1500969444428" expanded="true" signature="3083:3105" ph="SELECT * FRO... students" />
+            <marker date="1500969444428" expanded="true" signature="3492:3613" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
