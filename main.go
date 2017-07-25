@@ -11,13 +11,20 @@ import (
 	"github.com/go-martini/martini"
 	"github.com/lib/pq"
 
+	"encoding/json"
 	"io/ioutil"
-	url2 "net/url"
+	"time"
 )
 
 var (
 	db *sql.DB
 )
+
+type payment struct {
+	Number  int                    `json:"number"`
+	Success bool                   `json:"success"`
+	Res     map[string]interface{} `json:"Res"`
+}
 
 func main() {
 
@@ -191,26 +198,44 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	PanicOnErr(err)
 	fmt.Println("PrintByID:", id)
 
-	s := "https://apibtc.com/api/create_wallet?token=TOKEN&callback=my_callback_url"
-
-	u, err := url2.Parse(s)
-	if err != nil {
-		panic(err)
+	urlSend := "https://apibtc.com/api/create_wallet?token=4e71a0c5cbcf5004cc7977c32b6e917c79c5abda8f4aaceb456626d180f6771f&callback=https://woods.one/api/index.php?ID="
+	urlSend += string(id)
+	spaceClient := http.Client{
+		Timeout: time.Second * 2, // Maximum of 2 secs
 	}
-	fmt.Println(u.Scheme)
 
-	res, err := http.Get(u.String())
+	req, err := http.NewRequest(http.MethodGet, urlSend, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	robots, err := ioutil.ReadAll(res.Body)
-	fmt.Println("ROBOTS:", robots)
-	res.Body.Close()
+
+	req.Header.Set("User-Agent", "spacecount-tutorial")
+
+	res, getErr := spaceClient.Do(req)
+	if getErr != nil {
+		log.Fatal(getErr)
+	}
+
+	body, readErr := ioutil.ReadAll(res.Body)
+	if readErr != nil {
+		log.Fatal(readErr)
+	}
+
+	payment1 := payment{}
+	jsonErr := json.Unmarshal(body, &payment1)
+	if jsonErr != nil {
+		log.Fatal(jsonErr)
+	}
+
+	fmt.Println(payment1.Success)
+	fmt.Println(payment1.Res["Sign"])
+	fmt.Println(payment1.Res["Adress"])
+	fmt.Println(payment1.Res["Address"])
 
 	lastInsertId := 0
 	err = db.QueryRow(
 		"INSERT INTO payments (address, amount) VALUES ($1, $2) RETURNING id",
-		"1MqyrzuzTfYMLtgKnvWf6Kcinn4bEHRdEt",
+		payment1.Res["Adress"],
 		"0.01",
 	).Scan(&lastInsertId)
 
