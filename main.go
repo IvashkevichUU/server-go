@@ -158,6 +158,14 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 }
 
 func createDbPayment() {
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
 
 	result, err := db.Exec("CREATE TABLE IF NOT EXISTS payments (id SERIAL NOT NULL, address CHARACTER VARYING(300) NOT NULL, amount FLOAT NOT NULL )")
 	if err != nil {
