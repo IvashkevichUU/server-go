@@ -4,7 +4,6 @@
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.go" afterPath="$PROJECT_DIR$/account.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,11 +74,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state relative-caret-position="283">
+              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="e#14#177#0" expanded="true" />
                 <marker date="1501075734780" expanded="true" signature="1145:1283" ph="CREATE TABLE... IF" />
@@ -95,15 +94,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="-265">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding>
                 <element signature="e#14#114#0" expanded="true" />
-                <marker date="1501075677586" expanded="true" signature="1780:1828" ph="SELECT name,... users" />
-                <marker date="1501075677586" expanded="true" signature="2854:2933" ph="INSERT INTO users... " />
+                <marker date="1501076081281" expanded="true" signature="1780:1828" ph="SELECT name,... users" />
+                <marker date="1501076081281" expanded="true" signature="2890:2969" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -149,8 +148,8 @@
       <list>
         <option value="$PROJECT_DIR$/Godeps/Godeps.json" />
         <option value="$PROJECT_DIR$/login.go" />
-        <option value="$PROJECT_DIR$/account.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/account.go" />
       </list>
     </option>
   </component>
@@ -370,7 +369,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.9.8.8" />
     <MESSAGE value="v0.9.8.9" />
     <MESSAGE value="v0.9.9.1" />
     <MESSAGE value="v0.9.9.2" />
@@ -395,7 +393,8 @@
     <MESSAGE value="v1.1.9" />
     <MESSAGE value="v1.2.0" />
     <MESSAGE value="v1.2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.2.1" />
+    <MESSAGE value="v1.2.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.2.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -617,22 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#114#0" expanded="true" />
-            <marker date="1501075677586" expanded="true" signature="1780:1828" ph="SELECT name,... users" />
-            <marker date="1501075677586" expanded="true" signature="2854:2933" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="283">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
             <marker date="1501075734780" expanded="true" signature="1145:1283" ph="CREATE TABLE... IF" />
@@ -643,6 +630,18 @@
             <marker date="1501075734780" expanded="true" signature="3872:3886" ph="SELECT id FR... " />
             <marker date="1501075734780" expanded="true" signature="3872:3927" ph="SELECT id FR... payments" />
             <marker date="1501075734780" expanded="true" signature="5012:5079" ph="INSERT INTO payments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-265">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#114#0" expanded="true" />
+            <marker date="1501076081281" expanded="true" signature="1780:1828" ph="SELECT name,... users" />
+            <marker date="1501076081281" expanded="true" signature="2890:2969" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
