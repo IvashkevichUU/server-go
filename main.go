@@ -216,10 +216,11 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, payment1.Res["Address"])
 
 	lastInsertId := 0
+
 	err = db.QueryRow(
 		"INSERT INTO payments (address, amount) VALUES ($1, $2) RETURNING id",
 		payment1.Res["Adress"],
-		id*0, 01,
+		float64(id)*0.01,
 	).Scan(&lastInsertId)
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
