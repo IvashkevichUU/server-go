@@ -17,7 +17,7 @@ import (
 )
 
 var (
-	db *sql.DB
+	DB *sql.DB
 )
 
 type payment struct {
@@ -32,34 +32,34 @@ func main() {
 	m.Get("/", func() string {
 		return "Hello World"
 	})
-	m.Get("/db", openDb)
-	m.Get("/createdb", createDb)
+	m.Get("/DB", openDB)
+	m.Get("/createDB", createDB)
 	m.Get("/createstudent", createStudent)
 	m.Get("/getstudents", getStudents)
 	m.Get("/getstudents/{id}", PrintByID)
 
-	m.Get("/createdbpayments", createDbPayment)
+	m.Get("/createDBpayments", createDBPayment)
 	m.Get("/createpayments", createPayment)
 
 	m.Run()
 }
 
-func openDb() *sql.DB {
+func openDB() *sql.DB {
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
 	connection += " sslmode=require"
 
-	db, err := sql.Open("postgres", connection)
+	DB, err := sql.Open("postgres", connection)
 	if err != nil {
 		log.Println(err)
 	}
 
-	return db
+	return DB
 }
 
-func createDb() {
+func createDB() {
 
-	result, err := db.Exec("CREATE TABLE IF NOT EXISTS students (id SERIAL NOT NULL, fio CHARACTER VARYING(300) NOT NULL, info TEXT NOT NULL, score INTEGER NOT NULL )")
+	result, err := DB.Exec("CREATE TABLE IF NOT EXISTS students (id SERIAL NOT NULL, fio CHARACTER VARYING(300) NOT NULL, info TEXT NOT NULL, score INTEGER NOT NULL )")
 	if err != nil {
 		log.Println(err)
 	}
@@ -83,7 +83,7 @@ func PrintByID(id int64) {
 	var info sql.NullString
 	// var info string
 	var score int
-	row := db.QueryRow("SELECT fio, info, score FROM students WHERE id = $1", id)
+	row := DB.QueryRow("SELECT fio, info, score FROM students WHERE id = $1", id)
 	// fmt.Println(row)
 	err := row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
@@ -93,7 +93,7 @@ func PrintByID(id int64) {
 func createStudent(w http.ResponseWriter, r *http.Request) {
 
 	lastInsertId := 0
-	err := db.QueryRow(
+	err := DB.QueryRow(
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
 		"Oleg Petrov",
 		"test student",
@@ -112,7 +112,7 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 
 func getStudents(w http.ResponseWriter, r *http.Request) {
 
-	rows, err := db.Query("SELECT * FROM students")
+	rows, err := DB.Query("SELECT * FROM students")
 	PanicOnErr(err)
 	for rows.Next() {
 		var id uint
@@ -124,13 +124,13 @@ func getStudents(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Fprintf(w, "id: %d, Fio: %s, Info: %s, Score: %d\n", id, fio, info, score)
 	}
-	fmt.Fprintln(w, "Open connections: ", db.Stats().OpenConnections)
+	fmt.Fprintln(w, "Open connections: ", DB.Stats().OpenConnections)
 	rows.Close()
 }
 
-func createDbPayment() {
+func createDBPayment() {
 
-	result, err := db.Exec("CREATE TABLE IF NOT EXISTS payments (id SERIAL NOT NULL, address CHARACTER VARYING(300) NOT NULL, amount FLOAT NOT NULL )")
+	result, err := DB.Exec("CREATE TABLE IF NOT EXISTS payments (id SERIAL NOT NULL, address CHARACTER VARYING(300) NOT NULL, amount FLOAT NOT NULL )")
 	if err != nil {
 		log.Println(err)
 	}
@@ -145,7 +145,7 @@ func createDbPayment() {
 func createPayment(w http.ResponseWriter, r *http.Request) {
 
 	var id int
-	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
+	row := DB.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
 	err := row.Scan(&id)
 	PanicOnErr(err)
 	fmt.Fprintln(w, "PrintByID:", id)
@@ -187,7 +187,7 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 
 	lastInsertId := 0
 
-	err = db.QueryRow(
+	err = DB.QueryRow(
 		"INSERT INTO payments (address, amount) VALUES ($1, $2) RETURNING id",
 		payment1.Res["Adress"],
 		float64(id)*0.01,
