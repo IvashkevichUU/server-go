@@ -114,14 +114,16 @@ func Auth(w http.ResponseWriter, r *http.Request) {
 	var name string
 	var password string
 	row := db.QueryRow("SELECT name, password FROM users WHERE name = $1", inputLogin)
-
+	fmt.Println(row)
 	err = row.Scan(&name, &password)
 	PanicOnErr(err)
 
 	if inputPass == password {
-		http.Redirect(w, r, "/get_cookie", http.StatusFound)
+		//http.Redirect(w, r, "/get_cookie", http.StatusFound)
+		fmt.Fprint(w, "Welcome, "+inputPass)
 	} else {
-		http.Redirect(w, r, "/login", http.StatusFound)
+		//http.Redirect(w, r, "/login", http.StatusFound)
+		fmt.Fprint(w, "Welcome, "+inputLogin)
 	}
 
 }
