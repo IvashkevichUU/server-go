@@ -37,7 +37,6 @@ func main() {
 	m.Get("/createstudent", createStudent)
 	m.Get("/getstudents", getStudents)
 	m.Get("/getstudents/{id}", PrintByID)
-	m.Get("/hello", HelloServer)
 
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
@@ -70,10 +69,6 @@ func createDb() {
 		log.Println(err)
 	}
 	fmt.Sprintf("Update - RowsAffected", affected)
-}
-
-func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Привет %s!\n", r.URL.Path[1:])
 }
 
 func PanicOnErr(err error) {
@@ -224,7 +219,7 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	err = db.QueryRow(
 		"INSERT INTO payments (address, amount) VALUES ($1, $2) RETURNING id",
 		payment1.Res["Adress"],
-		"0.01",
+		id*0, 01,
 	).Scan(&lastInsertId)
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
