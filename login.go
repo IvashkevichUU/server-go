@@ -50,7 +50,7 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 
 	r.ParseForm()
 	inputLogin := r.Form["login"][0]
-	expiration := time.Now().Add(365 * 24 * time.Hour)
+	expiration := time.Now().Add(5 * time.Hour)
 
 	sessionID := RandStringRunes(32)
 	sessions[sessionID] = inputLogin
@@ -75,7 +75,7 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 		r.Form["Password"][0],
 	).Scan(&lastInsertId)
 
-	http.Redirect(w, r, "/login", http.StatusFound)
+	defer http.Redirect(w, r, "/login", http.StatusFound)
 
 }
 
