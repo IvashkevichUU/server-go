@@ -181,3 +181,15 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 	}
 
 }
+
+func Logout(w http.ResponseWriter, r *http.Request) {
+	sessionID, err := r.Cookie("session_id")
+	if err != nil {
+		http.Redirect(w, r, "/login", http.StatusFound)
+		return
+	}
+
+	sessions[sessionID.Value] = ""
+
+	http.Redirect(w, r, "/login", 302)
+}
