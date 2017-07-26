@@ -69,7 +69,7 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 
 	lastInsertId := 0
 	err = db.QueryRow(
-		"INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING id",
+		"INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING id_user",
 		r.Form["login"][0],
 		r.Form["Email"][0],
 		r.Form["Password"][0],
