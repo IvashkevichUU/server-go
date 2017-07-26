@@ -78,14 +78,6 @@ func PanicOnErr(err error) {
 }
 
 func PrintByID(id int64) {
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	connection += " sslmode=require"
-
-	db, err := sql.Open("postgres", connection)
-	if err != nil {
-		log.Println(err)
-	}
 
 	var fio string
 	var info sql.NullString
@@ -93,28 +85,24 @@ func PrintByID(id int64) {
 	var score int
 	row := db.QueryRow("SELECT fio, info, score FROM students WHERE id = $1", id)
 	// fmt.Println(row)
-	err = row.Scan(&fio, &info, &score)
+	err := row.Scan(&fio, &info, &score)
 	PanicOnErr(err)
 	fmt.Println("PrintByID:", id, "fio:", fio, "info:", info, "score:", score)
 }
 
 func createStudent(w http.ResponseWriter, r *http.Request) {
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	connection += " sslmode=require"
-
-	db, err := sql.Open("postgres", connection)
-	if err != nil {
-		log.Println(err)
-	}
 
 	lastInsertId := 0
-	err = db.QueryRow(
+	err := db.QueryRow(
 		"INSERT INTO students (fio, info, score) VALUES ($1, $2, $3) RETURNING id",
 		"Oleg Petrov",
 		"test student",
 		"85",
 	).Scan(&lastInsertId)
+
+	if err != nil {
+		log.Println(err)
+	}
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
 
@@ -123,17 +111,6 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 }
 
 func getStudents(w http.ResponseWriter, r *http.Request) {
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	connection += " sslmode=require"
-
-	db, err := sql.Open("postgres", connection)
-	if err != nil {
-		log.Println(err)
-	}
-
-	err = db.Ping()
-	PanicOnErr(err)
 
 	rows, err := db.Query("SELECT * FROM students")
 	PanicOnErr(err)
@@ -202,10 +179,11 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(jsonErr)
 	}
 
-	fmt.Fprintln(w, payment1.Success)
-	fmt.Fprintln(w, payment1.Res["Sign"])
-	fmt.Fprintln(w, payment1.Res["Adress"])
-	fmt.Fprintln(w, payment1.Res["Address"])
+	fmt.Fprintln(w, "Status: ", payment1.Success)
+	//fmt.Fprintln(w, payment1.Res["Sign"])
+	//fmt.Fprintln(w, payment1.Res["Adress"])
+	//fmt.Fprintln(w, payment1.Res["Address"])
+	//fmt.Fprintln(w, payment1.Res["DataEnd"])
 
 	lastInsertId := 0
 
@@ -215,6 +193,6 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 		float64(id)*0.01,
 	).Scan(&lastInsertId)
 
-	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
+	fmt.Fprintf(w, "Insert - LastInsertId: %d , Payment address: %s , Amount: %d \n", lastInsertId, payment1.Res["Adress"], float64(id)*0.01)
 
 }
