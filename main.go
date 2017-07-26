@@ -41,6 +41,8 @@ func main() {
 	m.Get("/login", Login)
 	m.Post("/get_cookie", GetCookie)
 
+	m.Get("/account", Accounts)
+
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
 
