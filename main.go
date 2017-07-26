@@ -41,7 +41,6 @@ func main() {
 	m.Get("/registration", Register)
 	m.Post("/auth", Auth)
 	m.Post("/get_cookie", GetCookie)
-	m.Get("/get_cookie", GetCookie)
 	m.Get("/login", Login)
 
 	m.Get("/account", Accounts)

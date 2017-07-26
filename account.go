@@ -85,22 +85,6 @@ func Auth(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	inputLogin := r.Form["login"][0]
 	inputPass := r.Form["Password"][0]
-	//expiration := time.Now().Add(5 * time.Hour)
-	//
-	//sessionID := RandStringRunes(32)
-	//sessions[sessionID] = inputLogin
-	//
-	//cookie := http.Cookie{Name: "session_id", Value: sessionID, Expires: expiration}
-	//http.SetCookie(w, &cookie)
-	//
-	//url := os.Getenv("DATABASE_URL")
-	//connection, _ := pq.ParseURL(url)
-	//connection += " sslmode=require"
-	//
-	//db, err := sql.Open("postgres", connection)
-	//if err != nil {
-	//	log.Println(err)
-	//}
 
 	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
@@ -119,11 +103,16 @@ func Auth(w http.ResponseWriter, r *http.Request) {
 	PanicOnErr(err)
 
 	if inputPass == password {
-		//http.Redirect(w, r, "/get_cookie", http.StatusFound)
-		fmt.Fprint(w, "Welcome, "+inputPass)
+		expiration := time.Now().Add(5 * time.Hour)
+
+		sessionID := RandStringRunes(32)
+		sessions[sessionID] = inputLogin
+
+		cookie := http.Cookie{Name: "session_id", Value: sessionID, Expires: expiration}
+		http.SetCookie(w, &cookie)
+		http.Redirect(w, r, "/account", http.StatusFound)
 	} else {
-		//http.Redirect(w, r, "/login", http.StatusFound)
-		fmt.Fprint(w, "Welcome, "+inputLogin)
+		http.Redirect(w, r, "/login", http.StatusFound)
 	}
 
 }
