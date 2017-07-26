@@ -166,10 +166,18 @@ func createDbPayment() {
 }
 
 func createPayment(w http.ResponseWriter, r *http.Request) {
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += " sslmode=require"
+
+	db, err := sql.Open("postgres", connection)
+	if err != nil {
+		log.Println(err)
+	}
 
 	var id int
 	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
-	err := row.Scan(&id)
+	err = row.Scan(&id)
 	PanicOnErr(err)
 	fmt.Fprintln(w, "PrintByID:", id)
 
