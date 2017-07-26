@@ -38,8 +38,10 @@ func main() {
 	m.Get("/getstudents", getStudents)
 	m.Get("/getstudents/{id}", PrintByID)
 
-	m.Get("/login", Login)
+	m.Get("/registration", Register)
+	m.Post("/auth", Auth)
 	m.Post("/get_cookie", GetCookie)
+	m.Get("/login", Login)
 
 	m.Get("/account", Accounts)
 
