@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
+    <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="v1.1.3">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
@@ -69,57 +71,52 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="students" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - dec3kk9kc4v8vm@ec2-23-21-96-159.compute-1.amazonaws.com" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dec3kk9kc4v8vm" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="public" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="119" selection-end-column="25" />
               <folding>
                 <element signature="e#14#177#0" expanded="true" />
-                <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-                <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-                <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-                <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-                <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-                <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-                <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+                <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+                <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+                <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+                <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+                <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+                <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+                <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+                <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="846">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding>
+                <element signature="e#14#114#0" expanded="true" />
+                <marker date="1501069131535" expanded="true" signature="1372:1446" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -137,6 +134,7 @@
       <list>
         <option value="$PROJECT_DIR$/Godeps/Godeps.json" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/login.go" />
       </list>
     </option>
   </component>
@@ -222,6 +220,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GO_FMT" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -328,10 +327,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27507162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24068768" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19521913" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19521913" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1620186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -352,7 +351,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.9.6" />
     <MESSAGE value="v0.9.8" />
     <MESSAGE value="v0.9.8.1" />
     <MESSAGE value="v0.9.8.2" />
@@ -377,7 +375,8 @@
     <MESSAGE value="v1.1.0" />
     <MESSAGE value="v1.1.1" />
     <MESSAGE value="v1.1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1.2" />
+    <MESSAGE value="v1.1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -392,13 +391,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -409,13 +409,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -426,13 +427,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -443,13 +445,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -460,13 +463,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -477,13 +481,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -494,13 +499,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
           </folding>
         </state>
       </provider>
@@ -547,14 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.payments">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -571,19 +569,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="119" selection-end-column="25" />
           <folding>
             <element signature="e#14#177#0" expanded="true" />
-            <marker date="1501060570340" expanded="true" signature="999:1137" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="1688:1739" ph="SELECT fio, students" />
-            <marker date="1501060570340" expanded="true" signature="2192:2264" ph="INSERT INTO students... " />
-            <marker date="1501060570340" expanded="true" signature="2740:2762" ph="SELECT * FRO... students" />
-            <marker date="1501060570340" expanded="true" signature="3149:3270" ph="CREATE TABLE... IF" />
-            <marker date="1501060570340" expanded="true" signature="3726:3774" ph="SELECT id FR... payments" />
-            <marker date="1501060570340" expanded="true" signature="4859:4926" ph="INSERT INTO payments... " />
+            <marker date="1501068243613" expanded="true" signature="1058:1196" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="1747:1798" ph="SELECT fio, students" />
+            <marker date="1501068243613" expanded="true" signature="2251:2323" ph="INSERT INTO students... " />
+            <marker date="1501068243613" expanded="true" signature="2799:2821" ph="SELECT * FRO... students" />
+            <marker date="1501068243613" expanded="true" signature="3208:3329" ph="CREATE TABLE... IF" />
+            <marker date="1501068243613" expanded="true" signature="3785:3799" ph="SELECT id FR... " />
+            <marker date="1501068243613" expanded="true" signature="3785:3840" ph="SELECT id FR... payments" />
+            <marker date="1501068243613" expanded="true" signature="4925:4992" ph="INSERT INTO payments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#114#0" expanded="true" />
+            <marker date="1501069131535" expanded="true" signature="1372:1446" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>

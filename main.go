@@ -38,6 +38,9 @@ func main() {
 	m.Get("/getstudents", getStudents)
 	m.Get("/getstudents/{id}", PrintByID)
 
+	m.Get("/login", Login)
+	m.Post("/get_cookie", GetCookie)
+
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
 
@@ -176,7 +179,7 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var id int
-	row := db.QueryRow("SELECT id FROM payments ORDER BY id DESC LIMIT 1")
+	row := db.QueryRow("SELECT id FROM public.payments ORDER BY id DESC LIMIT 1")
 	err = row.Scan(&id)
 	PanicOnErr(err)
 	fmt.Fprintln(w, "PrintByID:", id)
@@ -224,6 +227,6 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 		float64(id)*0.01,
 	).Scan(&lastInsertId)
 
-	fmt.Fprintf(w, "Insert - LastInsertId: %d , Payment address: %s , Amount: %d \n", lastInsertId, payment1.Res["Adress"], float64(id)*0.01)
+	fmt.Fprintf(w, "Insert - LastInsertId: %d , Payment address: %s , Amount: %v \n", lastInsertId, payment1.Res["Adress"], float64(id)*0.01)
 
 }
