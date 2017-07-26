@@ -75,7 +75,9 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 		r.Form["Password"][0],
 	).Scan(&lastInsertId)
 
-	defer http.Redirect(w, r, "/login", http.StatusFound)
+	fmt.Fprintf(w, "Insert - LastInsertId: %d \n", lastInsertId)
+
+	//defer http.Redirect(w, r, "/login", http.StatusFound)
 
 }
 
