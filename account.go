@@ -43,7 +43,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
 
-	if err == http.ErrNoCookie {
+	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
 		t.Execute(w, "active")
 		return
