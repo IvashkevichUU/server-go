@@ -27,19 +27,10 @@ type payment struct {
 	Res     map[string]interface{} `json:"Res"`
 }
 
-type Todo struct {
-	Name string
-	Done bool
-}
-
-func IsNotDone(todo Todo) bool {
-	return !todo.Done
-}
-
 func main() {
 
 	m := martini.Classic()
-	m.Get("/", Index)
+	m.Get("/", Home)
 	m.Get("/db", openDb)
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
@@ -63,10 +54,11 @@ func main() {
 
 }
 
-func Index(w http.ResponseWriter, r *http.Request) {
+func Home(w http.ResponseWriter, r *http.Request) {
 
 	t, _ := template.ParseFiles("templates/index.html")
 	t.Execute(w, "Hello World!")
+	return
 
 }
 

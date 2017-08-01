@@ -24,18 +24,18 @@ import (
 //</html>
 //`
 
-var RegFormTmpl = `
-<html>
-	<body>
-	<form action="/get_cookie" method="post">
-		Login: <input type="text" name="login">
-		E-mail: <input type="email" name="Email">
-		Password: <input type="password" name="Password">
-		<input type="submit" value="Login">
-	</form>
-	</body>
-</html>
-`
+//var RegFormTmpl = `
+//<html>
+//	<body>
+//	<form action="/get_cookie" method="post">
+//		Login: <input type="text" name="login">
+//		E-mail: <input type="email" name="Email">
+//		Password: <input type="password" name="Password">
+//		<input type="submit" value="Login">
+//	</form>
+//	</body>
+//</html>
+//`
 
 var sessions = map[string]string{}
 
@@ -44,7 +44,8 @@ func Register(w http.ResponseWriter, r *http.Request) {
 	sessionID, err := r.Cookie("session_id")
 
 	if err == http.ErrNoCookie {
-		w.Write([]byte(RegFormTmpl))
+		t, _ := template.ParseFiles("templates/registration.html")
+		t.Execute(w, "active")
 		return
 	} else if err != nil {
 		PanicOnErr(err)
@@ -66,7 +67,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 	if err == http.ErrNoCookie {
 		t, _ := template.ParseFiles("templates/login.html")
-		t.Execute(w, "Hello World!")
+		t.Execute(w, "active")
 		return
 	} else if err != nil {
 		PanicOnErr(err)
