@@ -195,5 +195,5 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 
 	sessions[sessionID.Value] = ""
 
-	http.Redirect(w, r, "/login", 302)
+	http.Redirect(w, r, "/", 302)
 }

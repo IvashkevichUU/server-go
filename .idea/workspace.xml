@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/css/carousel.min.css" afterPath="$PROJECT_DIR$/templates/css/carousel.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.go" afterPath="$PROJECT_DIR$/account.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,7 +77,7 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="-2871">
               <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
               <folding>
                 <element signature="e#14#194#0" expanded="true" />
@@ -96,7 +96,7 @@
       <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="810">
               <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -108,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carousel.min.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="carousel.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/css/carousel.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -152,15 +152,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="437">
+              <caret line="197" column="26" lean-forward="false" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
               <folding>
                 <element signature="e#14#131#0" expanded="true" />
-                <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-                <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+                <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+                <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -198,11 +198,11 @@
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/templates/css/account.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/account.go" />
         <option value="$PROJECT_DIR$/templates/account.html" />
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/css/carousel.min.css" />
+        <option value="$PROJECT_DIR$/account.go" />
       </list>
     </option>
   </component>
@@ -489,8 +489,8 @@
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+            <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -531,8 +531,8 @@
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+            <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -586,8 +586,8 @@
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+            <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -628,8 +628,8 @@
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+            <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -833,19 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/css/signin.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -870,40 +857,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding>
-            <element signature="e#14#194#0" expanded="true" />
-            <marker date="1501583746985" expanded="true" signature="1337:1475" ph="CREATE TABLE... students" />
-            <marker date="1501583746985" expanded="true" signature="2026:2077" ph="SELECT fio, students" />
-            <marker date="1501583746985" expanded="true" signature="2530:2602" ph="INSERT INTO students... " />
-            <marker date="1501583746985" expanded="true" signature="3078:3100" ph="SELECT * FRO... students" />
-            <marker date="1501583746985" expanded="true" signature="3487:3608" ph="CREATE TABLE... payments" />
-            <marker date="1501583746985" expanded="true" signature="4064:4119" ph="SELECT id FR... payments" />
-            <marker date="1501583746985" expanded="true" signature="5204:5271" ph="INSERT INTO payments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="56" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#131#0" expanded="true" />
-            <marker date="1501588530619" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1501588530619" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,9 +885,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/css/carousel.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="138" lean-forward="true" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="810">
           <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -940,11 +919,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/css/carousel.min.css">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="138" lean-forward="true" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
-          <folding />
+        <state relative-caret-position="-2871">
+          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="e#14#194#0" expanded="true" />
+            <marker date="1501583746985" expanded="true" signature="1337:1475" ph="CREATE TABLE... students" />
+            <marker date="1501583746985" expanded="true" signature="2026:2077" ph="SELECT fio, students" />
+            <marker date="1501583746985" expanded="true" signature="2530:2602" ph="INSERT INTO students... " />
+            <marker date="1501583746985" expanded="true" signature="3078:3100" ph="SELECT * FRO... students" />
+            <marker date="1501583746985" expanded="true" signature="3487:3608" ph="CREATE TABLE... payments" />
+            <marker date="1501583746985" expanded="true" signature="4064:4119" ph="SELECT id FR... payments" />
+            <marker date="1501583746985" expanded="true" signature="5204:5271" ph="INSERT INTO payments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="197" column="26" lean-forward="false" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#131#0" expanded="true" />
+            <marker date="1501592767134" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
+            <marker date="1501592767134" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
