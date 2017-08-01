@@ -57,16 +57,16 @@ func main() {
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
 
-	m.Get("/todo", TempTodo)
 	m.Use(martini.Static("templates"))
+
 	m.Run()
 
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
 
-	t, _ := template.ParseFiles("templates/index.html") //setp 1
-	t.Execute(w, "Hello World!")                        //step 2
+	t, _ := template.ParseFiles("templates/index.html")
+	t.Execute(w, "Hello World!")
 
 }
 
@@ -251,28 +251,5 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	).Scan(&lastInsertId)
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d , Payment address: %s , Amount: %v \n", lastInsertId, payment1.Res["Adress"], float64(id)*0.01)
-
-}
-
-func TempTodo(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.New("template.html").Funcs(template.FuncMap{"IsNotDone": IsNotDone}).ParseFiles("templates/template.html")
-	if err != nil {
-		log.Fatal("Can not expand template", err)
-		return
-	}
-
-	todos := []Todo{
-		{"Выучить Go", false},
-		{"Посетить лекцию по вебу", false},
-		{"...", false},
-		{"Profit", false},
-	}
-
-	// исполняем шаблон
-	err = tmpl.Execute(w, todos)
-	if err != nil {
-		// вернем 500 и напишем ошибку
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
 
 }

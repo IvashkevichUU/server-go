@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/lib/pq"
+	"html/template"
 	"log"
 	"math/rand"
 	"net/http"
@@ -11,17 +12,17 @@ import (
 	"time"
 )
 
-var loginFormTmpl = `
-<html>
-	<body>
-	<form action="/auth" method="post">
-		Login: <input type="text" name="login">
-		Password: <input type="password" name="Password">
-		<input type="submit" value="Login">
-	</form>
-	</body>
-</html>
-`
+//var loginFormTmpl = `
+//<html>
+//	<body>
+//	<form action="/auth" method="post">
+//		Login: <input type="text" name="login">
+//		Password: <input type="password" name="Password">
+//		<input type="submit" value="Login">
+//	</form>
+//	</body>
+//</html>
+//`
 
 var RegFormTmpl = `
 <html>
@@ -64,7 +65,8 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	sessionID, err := r.Cookie("session_id")
 
 	if err == http.ErrNoCookie {
-		w.Write([]byte(loginFormTmpl))
+		t, _ := template.ParseFiles("templates/login.html")
+		t.Execute(w, "Hello World!")
 		return
 	} else if err != nil {
 		PanicOnErr(err)
