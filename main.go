@@ -58,8 +58,9 @@ func main() {
 	m.Get("/createpayments", createPayment)
 
 	m.Get("/todo", TempTodo)
-
+	m.Use(martini.Static("templates"))
 	m.Run()
+
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
