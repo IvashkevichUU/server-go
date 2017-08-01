@@ -15,7 +15,7 @@
     <![endif]-->
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/css/carousel.min.css" rel="stylesheet">
     <link href="/css/account.css" rel="stylesheet">
 
 </head>
@@ -41,6 +41,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="/account">Profile</a></li>
+                        <li class="active"><a href="/logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -133,27 +134,18 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(function() {
-                $('#profile-image1').on('click', function() {
-                    $('#profile-image-upload').click();
-                });
-            });
-        </script>
-
-
-
-
-
-
-
-
 
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-
+<script>
+    $(function() {
+        $('#profile-image1').on('click', function() {
+            $('#profile-image-upload').click();
+        });
+    });
+</script>
 </body>
 </html>
