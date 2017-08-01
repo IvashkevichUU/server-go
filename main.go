@@ -64,25 +64,8 @@ func main() {
 
 func Index(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, err := template.New("index.html").Funcs(template.FuncMap{"IsNotDone": IsNotDone}).ParseFiles("templates/index.html")
-	if err != nil {
-		log.Fatal("Can not expand template", err)
-		return
-	}
-
-	todos := []Todo{
-		{"Выучить Go", false},
-		{"Посетить лекцию по вебу", false},
-		{"...", false},
-		{"Profit", false},
-	}
-
-	// исполняем шаблон
-	err = tmpl.Execute(w, todos)
-	if err != nil {
-		// вернем 500 и напишем ошибку
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	} // merge.
+	t, _ := template.ParseFiles("templates/index.html") //setp 1
+	t.Execute(w, "Hello World!")                        //step 2
 
 }
 
