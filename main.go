@@ -11,6 +11,7 @@ import (
 	"github.com/lib/pq"
 
 	"encoding/json"
+	"html/template"
 	"io/ioutil"
 	"strconv"
 	"time"
@@ -26,12 +27,19 @@ type payment struct {
 	Res     map[string]interface{} `json:"Res"`
 }
 
+type Todo struct {
+	Name string
+	Done bool
+}
+
+func IsNotDone(todo Todo) bool {
+	return !todo.Done
+}
+
 func main() {
 
 	m := martini.Classic()
-	m.Get("/", func() string {
-		return "Hello World"
-	})
+	m.Get("/", Index)
 	m.Get("/db", openDb)
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
@@ -49,7 +57,18 @@ func main() {
 	m.Get("/createdbpayments", createDbPayment)
 	m.Get("/createpayments", createPayment)
 
+	m.Get("/todo", TempTodo)
+
 	m.Run()
+}
+
+func Index(w http.ResponseWriter, r *http.Request) {
+
+	t := template.New("index.html")             // Create a template.
+	t, _ = t.ParseFiles("templates/index.html") // Parse template file.
+	user := "Test"                              // Get current user infomration.
+	t.Execute(w, user)                          // merge.
+
 }
 
 func openDb() *sql.DB {
@@ -233,5 +252,28 @@ func createPayment(w http.ResponseWriter, r *http.Request) {
 	).Scan(&lastInsertId)
 
 	fmt.Fprintf(w, "Insert - LastInsertId: %d , Payment address: %s , Amount: %v \n", lastInsertId, payment1.Res["Adress"], float64(id)*0.01)
+
+}
+
+func TempTodo(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.New("template.html").Funcs(template.FuncMap{"IsNotDone": IsNotDone}).ParseFiles("templates/template.html")
+	if err != nil {
+		log.Fatal("Can not expand template", err)
+		return
+	}
+
+	todos := []Todo{
+		{"Выучить Go", false},
+		{"Посетить лекцию по вебу", false},
+		{"...", false},
+		{"Profit", false},
+	}
+
+	// исполняем шаблон
+	err = tmpl.Execute(w, todos)
+	if err != nil {
+		// вернем 500 и напишем ошибку
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 
 }
