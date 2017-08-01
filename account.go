@@ -180,7 +180,8 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		fmt.Fprint(w, "Session not found")
 	} else {
-		fmt.Fprint(w, "Welcome, "+username)
+		t, _ := template.ParseFiles("templates/account.html")
+		t.Execute(w, username)
 	}
 
 }
