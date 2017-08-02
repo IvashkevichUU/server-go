@@ -39,13 +39,14 @@
                 <li><a href="#contact">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  {{ if not . }}
+                  {{ if .None }}
                   <li><a href="/registration">Registration</a></li>
                   <li><a href="/login">Sign In</a></li>
                   {{ end }}
-                  {{ if . }}
+                  {{ if .Have }}
                   <li><a href="/account">Profile</a></li>
                   {{ end }}
+
               </ul>
             </div>
           </div>

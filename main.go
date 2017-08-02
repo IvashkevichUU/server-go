@@ -30,10 +30,8 @@ type payment struct {
 func main() {
 
 	m := martini.Classic()
-	m.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/home", 301)
-	})
-	m.Get("/home", Home)
+
+	m.Get("/", Home)
 	m.Get("/db", openDb)
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
@@ -57,6 +55,11 @@ func main() {
 
 }
 
+type Cookie struct {
+	Have string
+	None string
+}
+
 func Home(w http.ResponseWriter, r *http.Request) {
 
 	t, _ := template.ParseFiles("templates/main.html")
@@ -64,8 +67,10 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	sessionID, err := r.Cookie("session_id")
 
 	if err == http.ErrNoCookie {
-		username := "none"
-		t.Execute(w, username)
+
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
 		return
 	} else if err != nil {
 		PanicOnErr(err)
@@ -74,15 +79,21 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	username, ok := sessions[sessionID.Value]
 
 	if !ok {
-		t.Execute(w, username)
+		per := Cookie{None: username}
+		t.Execute(w, per)
+		return
+	} else if username == "" {
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
 		return
 	} else {
-
-		t.Execute(w, username)
+		per := Cookie{Have: username}
+		t.Execute(w, per)
 		return
 	}
 
-	t.Execute(w, "none")
+	t.Execute(w, err)
 	return
 
 }
