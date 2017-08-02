@@ -39,8 +39,13 @@
                 <li><a href="#contact">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="/registration">Registration</a></li>
-                <li><a href="/login">Sign In</a></li>
+                  {{ if not . }}
+                  <li><a href="/registration">Registration</a></li>
+                  <li><a href="/login">Sign In</a></li>
+                  {{ end }}
+                  {{ if . }}
+                  <li><a href="/account">Profile</a></li>
+                  {{ end }}
               </ul>
             </div>
           </div>
@@ -93,7 +98,7 @@
 </div>
 
 <div class="container marketing">
- 
+
 <div class="row">
 <div class="col-lg-4">
 <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">

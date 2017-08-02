@@ -30,7 +30,10 @@ type payment struct {
 func main() {
 
 	m := martini.Classic()
-	m.Get("/", Home)
+	m.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/home", 301)
+	})
+	m.Get("/home", Home)
 	m.Get("/db", openDb)
 	m.Get("/createdb", createDb)
 	m.Get("/createstudent", createStudent)
@@ -56,8 +59,30 @@ func main() {
 
 func Home(w http.ResponseWriter, r *http.Request) {
 
-	t, _ := template.ParseFiles("templates/index.html")
-	t.Execute(w, "Hello World!")
+	t, _ := template.ParseFiles("templates/main.html")
+
+	sessionID, err := r.Cookie("session_id")
+
+	if err == http.ErrNoCookie {
+		username := "none"
+		t.Execute(w, username)
+		return
+	} else if err != nil {
+		PanicOnErr(err)
+	}
+
+	username, ok := sessions[sessionID.Value]
+
+	if !ok {
+		t.Execute(w, username)
+		return
+	} else {
+
+		t.Execute(w, username)
+		return
+	}
+
+	t.Execute(w, "none")
 	return
 
 }
