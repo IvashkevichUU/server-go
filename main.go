@@ -44,6 +44,9 @@ func main() {
 	m.Get("/login", Login)
 	m.Get("/logout", Logout)
 
+	m.Get("/about", About)
+	m.Get("/contact", Contact)
+
 	m.Get("/account", Accounts)
 
 	m.Get("/createdbpayments", createDbPayment)
@@ -96,6 +99,78 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, err)
 	return
 
+}
+func About(w http.ResponseWriter, r *http.Request) {
+
+	t, _ := template.ParseFiles("templates/about.html")
+
+	sessionID, err := r.Cookie("session_id")
+
+	if err == http.ErrNoCookie {
+
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
+		return
+	} else if err != nil {
+		PanicOnErr(err)
+	}
+
+	username, ok := sessions[sessionID.Value]
+
+	if !ok {
+		per := Cookie{None: username}
+		t.Execute(w, per)
+		return
+	} else if username == "" {
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
+		return
+	} else {
+		per := Cookie{Have: username}
+		t.Execute(w, per)
+		return
+	}
+
+	t.Execute(w, err)
+	return
+
+}
+func Contact(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles("templates/contact.html")
+
+	sessionID, err := r.Cookie("session_id")
+
+	if err == http.ErrNoCookie {
+
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
+		return
+	} else if err != nil {
+		PanicOnErr(err)
+	}
+
+	username, ok := sessions[sessionID.Value]
+
+	if !ok {
+		per := Cookie{None: username}
+		t.Execute(w, per)
+		return
+	} else if username == "" {
+		per := Cookie{None: "one"}
+
+		t.Execute(w, per)
+		return
+	} else {
+		per := Cookie{Have: username}
+		t.Execute(w, per)
+		return
+	}
+
+	t.Execute(w, err)
+	return
 }
 
 func openDb() *sql.DB {
