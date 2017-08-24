@@ -18,3 +18,9 @@ body {
      /* This should be based on your carousel setting. For bs, it should be 5second*/
      transform: scale(1.05, 1.05);
  }
+
+.carousel,
+.carousel .item,
+.carousel-inner>.item>img {
+    height: 100vh;
+}
