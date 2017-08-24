@@ -54,14 +54,14 @@
   </div>
 </div>
  
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
  
 <ol class="carousel-indicators">
 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 <li data-target="#myCarousel" data-slide-to="1"></li>
 <li data-target="#myCarousel" data-slide-to="2"></li>
 </ol>
-<div class="carousel-inner">
+<div class="carousel-inner carousel-zoom">
 <div class="item active">
 <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
 <div class="container">
@@ -163,6 +163,67 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/holder.js"></script>
+<style>
+    /*
+inspired from http://codepen.io/Rowno/pen/Afykb
+& https://jsfiddle.net/q0rgL8ws/
+*/
+    .carousel-fade .carousel-inner .item {
+        opacity: 0;
+        transition-property: opacity;
+        overflow:hidden;
+    }
+    .item.active img {
+        transition: transform 3000ms linear 0s;
+        /* This should be based on your carousel setting. For bs, it should be 5second*/
+        transform: scale(1.05, 1.05);
+    }
+    .carousel-fade .carousel-inner .active {
+        opacity: 1;
+    }
 
+    .carousel-fade .carousel-inner .active.left,
+    .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .carousel-fade .carousel-inner .next.left,
+    .carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+    }
+
+    .carousel-fade .carousel-control {
+        z-index: 2;
+    }
+
+    /*
+    WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+    now override the 3.3 new styles for modern browsers & apply opacity
+    */
+    @media all and (transform-3d), (-webkit-transform-3d) {
+        .carousel-fade .carousel-inner > .item.next,
+        .carousel-fade .carousel-inner > .item.active.right {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .carousel-fade .carousel-inner > .item.prev,
+        .carousel-fade .carousel-inner > .item.active.left {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .carousel-fade .carousel-inner > .item.next.left,
+        .carousel-fade .carousel-inner > .item.prev.right,
+        .carousel-fade .carousel-inner > .item.active {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
 </body>
 </html>
