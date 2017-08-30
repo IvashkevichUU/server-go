@@ -13,6 +13,7 @@
       <root url="file://$PROJECT_DIR$/../blc" />
       <root url="file://$PROJECT_DIR$/../gowall" />
       <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../testarray" />
       <root url="file://$PROJECT_DIR$/../api" />
       <root url="file://$PROJECT_DIR$/../timer" />
     </CLASSES>
@@ -29,6 +30,7 @@
       <root url="file://$PROJECT_DIR$/../blc" />
       <root url="file://$PROJECT_DIR$/../gowall" />
       <root url="file://$PROJECT_DIR$/../go-server" />
+      <root url="file://$PROJECT_DIR$/../testarray" />
       <root url="file://$PROJECT_DIR$/../api" />
       <root url="file://$PROJECT_DIR$/../timer" />
     </SOURCES>
