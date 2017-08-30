@@ -123,8 +123,8 @@
       <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="85" column="71" lean-forward="false" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
+            <state relative-caret-position="251">
+              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -155,7 +155,7 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="18">
               <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
               <folding />
             </state>
@@ -195,12 +195,12 @@
       <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="184" column="21" lean-forward="true" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="29" />
+            <state relative-caret-position="365">
+              <caret line="191" column="5" lean-forward="true" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
               <folding>
                 <element signature="e#14#131#0" expanded="true" />
-                <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-                <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+                <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+                <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -497,7 +497,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1.2.5" />
     <MESSAGE value="v1.2.6" />
     <MESSAGE value="v1.2.7" />
     <MESSAGE value="v1.2.8" />
@@ -522,7 +521,8 @@
     <MESSAGE value="v2.1" />
     <MESSAGE value="v2.2" />
     <MESSAGE value="v2.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.3" />
+    <MESSAGE value="v2.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -537,8 +537,8 @@
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+            <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -578,8 +578,8 @@
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+            <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -631,8 +631,8 @@
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+            <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -672,8 +672,8 @@
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+            <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -943,14 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -999,22 +991,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="85" column="71" lean-forward="false" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
+        <state relative-caret-position="251">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="184" column="21" lean-forward="true" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="29" />
+        <state relative-caret-position="365">
+          <caret line="191" column="5" lean-forward="true" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
           <folding>
             <element signature="e#14#131#0" expanded="true" />
-            <marker date="1504100694932" expanded="true" signature="2014:2062" ph="SELECT name,... users" />
-            <marker date="1504100694932" expanded="true" signature="3124:3203" ph="INSERT INTO users... " />
+            <marker date="1504101447041" expanded="true" signature="2051:2099" ph="SELECT name,... users" />
+            <marker date="1504101447041" expanded="true" signature="3161:3240" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>

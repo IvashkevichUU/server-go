@@ -39,6 +39,10 @@ import (
 
 var sessions = map[string]string{}
 
+type Person struct {
+	Name string
+}
+
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
@@ -181,8 +185,10 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/logout", http.StatusFound)
 		return
 	} else {
+		p := Person{}
+		p.Name = username
 		t, _ := template.ParseFiles("templates/account.html")
-		t.Execute(w, username)
+		t.Execute(w, p)
 	}
 
 }
