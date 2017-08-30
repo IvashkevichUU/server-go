@@ -178,7 +178,8 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 	username, ok := sessions[sessionID.Value]
 
 	if !ok {
-		fmt.Fprint(w, "Session not found")
+		http.Redirect(w, r, "/logout", http.StatusFound)
+		return
 	} else {
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, username)
