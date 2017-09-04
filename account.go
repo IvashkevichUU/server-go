@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/lib/pq"
-	"golang.org/x/net/websocket"
+	_ "golang.org/x/net/websocket"
 	"html/template"
 	"log"
 	"math/rand"
