@@ -42,7 +42,7 @@ var sessions = map[string]string{}
 
 type Person struct {
 	Name   string
-	Return []byte
+	Return string
 }
 
 func Register(w http.ResponseWriter, r *http.Request) {
@@ -209,7 +209,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 302)
 }
 
-func Websocket() []byte {
+func Websocket() string {
 	origin := "http://localhost/"
 	url := "wss://bitshares.openledger.info/ws"
 	ws, err := websocket.Dial(url, "", origin)
@@ -247,6 +247,7 @@ func Websocket() []byte {
 	}
 	mes3 := msg[:n]
 	fmt.Println(mes1, mes2)
-	return mes3
+
+	return string(mes3[:])
 
 }
