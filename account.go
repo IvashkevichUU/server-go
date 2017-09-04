@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"github.com/lib/pq"
+	"golang.org/x/net/websocket"
 	"html/template"
 	"log"
 	"math/rand"
@@ -40,7 +41,8 @@ import (
 var sessions = map[string]string{}
 
 type Person struct {
-	Name string
+	Name   string
+	Return []byte
 }
 
 func Register(w http.ResponseWriter, r *http.Request) {
@@ -185,8 +187,10 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/logout", http.StatusFound)
 		return
 	} else {
+
 		p := Person{}
 		p.Name = username
+		p.Return = Websocket(username)
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
@@ -203,4 +207,46 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	sessions[sessionID.Value] = ""
 
 	http.Redirect(w, r, "/", 302)
+}
+
+func Websocket(account string) []byte {
+	origin := "http://localhost/"
+	url := "wss://bitshares.openledger.info/ws"
+	ws, err := websocket.Dial(url, "", origin)
+	if err != nil {
+		log.Fatal(err)
+	}
+	per := "{\"id\": 1, \"method\": \"call\", \"params\": [1, \"login\", [\"\", \"\"]]}"
+	per2 := "{\"id\": 2, \"method\": \"call\", \"params\": [1,\"database\",[]]}"
+	per3 := "{\"id\": 4, \"method\": \"call\", \"params\": [2,\"get_full_accounts\",[[" + account + "], false]]}"
+	if _, err := ws.Write([]byte(per)); err != nil {
+		log.Fatal(err)
+	}
+	var msg = make([]byte, 2048)
+	var n int
+	if n, err = ws.Read(msg); err != nil {
+		log.Fatal(err)
+	}
+	mes1 := msg[:n]
+
+	if _, err := ws.Write([]byte(per2)); err != nil {
+		log.Fatal(err)
+	}
+
+	if n, err = ws.Read(msg); err != nil {
+		log.Fatal(err)
+	}
+	mes2 := msg[:n]
+
+	if _, err := ws.Write([]byte(per3)); err != nil {
+		log.Fatal(err)
+	}
+
+	if n, err = ws.Read(msg); err != nil {
+		log.Fatal(err)
+	}
+	mes3 := msg[:n]
+	fmt.Println(mes1, mes2)
+	return mes3
+
 }

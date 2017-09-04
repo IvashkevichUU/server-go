@@ -22,6 +22,10 @@
 			"ImportPath": "github.com/lib/pq/oid",
 			"Comment": "go1.0-cutoff-171-g8837942",
 			"Rev": "8837942c3e09574accbc5f150e2c5e057189cace"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "ddf80d0970594e2e4cccf5a98861cad3d9eaa4cd"
 		}
 	]
 }
