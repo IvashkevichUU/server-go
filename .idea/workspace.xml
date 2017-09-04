@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.go" afterPath="$PROJECT_DIR$/account.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/account.html" afterPath="$PROJECT_DIR$/templates/account.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -192,15 +190,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding>
-                <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-                <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+                <element signature="e#14#161#0" expanded="true" />
+                <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+                <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Godeps.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Godeps/Godeps.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,8 +256,8 @@
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/templates/css/stylesheet.css" />
-        <option value="$PROJECT_DIR$/account.go" />
         <option value="$PROJECT_DIR$/templates/account.html" />
+        <option value="$PROJECT_DIR$/account.go" />
       </list>
     </option>
   </component>
@@ -343,6 +352,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-go" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server-go" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Godeps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,14 +491,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1448" y="-140" width="1456" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26146132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26146132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21991403" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19521913" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1620186" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -496,7 +518,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1.2.7" />
     <MESSAGE value="v1.2.8" />
     <MESSAGE value="v1.2.9" />
     <MESSAGE value="v1.3.0" />
@@ -521,7 +542,8 @@
     <MESSAGE value="v2.3" />
     <MESSAGE value="v2.4" />
     <MESSAGE value="v2.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.5" />
+    <MESSAGE value="v2.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,8 +557,9 @@
         <state relative-caret-position="3114">
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-            <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -575,8 +598,9 @@
         <state relative-caret-position="3114">
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-            <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -627,8 +651,9 @@
         <state relative-caret-position="3294">
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
-            <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-            <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -667,8 +692,9 @@
         <state relative-caret-position="3348">
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
-            <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-            <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -789,13 +815,6 @@
             <marker date="1501663004848" expanded="true" signature="5803:5858" ph="SELECT id FR... payments" />
             <marker date="1501663004848" expanded="true" signature="6943:7010" ph="INSERT INTO payments... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Godeps/Godeps.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1004,12 +1023,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="306">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
           <folding>
-            <marker date="1504513809600" expanded="true" signature="2096:2144" ph="SELECT name,... users" />
-            <marker date="1504513809600" expanded="true" signature="3206:3285" ph="INSERT INTO users... " />
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504514066877" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504514066877" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Godeps/Godeps.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
