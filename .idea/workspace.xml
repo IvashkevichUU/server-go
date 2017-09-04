@@ -4,7 +4,6 @@
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.go" afterPath="$PROJECT_DIR$/account.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/account.html" afterPath="$PROJECT_DIR$/templates/account.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,7 +103,7 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="612">
               <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
               <folding>
                 <element signature="e#14#194#0" expanded="true" />
@@ -120,7 +119,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -194,15 +193,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="254" column="0" lean-forward="true" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+            <state relative-caret-position="185">
+              <caret line="192" column="37" lean-forward="false" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="37" />
               <folding>
                 <element signature="e#14#161#0" expanded="true" />
-                <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-                <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
+                <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+                <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -513,7 +512,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1.3.2" />
     <MESSAGE value="v1.3.3" />
     <MESSAGE value="v1.3.4" />
     <MESSAGE value="v1.3.5" />
@@ -538,7 +536,8 @@
     <MESSAGE value="v2.8" />
     <MESSAGE value="v2.9" />
     <MESSAGE value="v3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v3.0" />
+    <MESSAGE value="v3.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v3.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,8 +552,8 @@
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#161#0" expanded="true" />
-            <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-            <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
+            <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -594,8 +593,8 @@
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#161#0" expanded="true" />
-            <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-            <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
+            <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -647,8 +646,8 @@
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#14#161#0" expanded="true" />
-            <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-            <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
+            <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -688,8 +687,8 @@
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
             <element signature="e#14#161#0" expanded="true" />
-            <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-            <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
+            <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -979,23 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#194#0" expanded="true" />
-            <marker date="1501663004848" expanded="true" signature="3076:3214" ph="CREATE TABLE... students" />
-            <marker date="1501663004848" expanded="true" signature="3765:3816" ph="SELECT fio, students" />
-            <marker date="1501663004848" expanded="true" signature="4269:4341" ph="INSERT INTO students... " />
-            <marker date="1501663004848" expanded="true" signature="4817:4839" ph="SELECT * FRO... students" />
-            <marker date="1501663004848" expanded="true" signature="5226:5347" ph="CREATE TABLE... payments" />
-            <marker date="1501663004848" expanded="true" signature="5803:5858" ph="SELECT id FR... payments" />
-            <marker date="1501663004848" expanded="true" signature="6943:7010" ph="INSERT INTO payments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Godeps/Godeps.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1017,24 +999,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="254" column="0" lean-forward="true" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#161#0" expanded="true" />
-            <marker date="1504518824518" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
-            <marker date="1504518824518" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="86" column="62" lean-forward="true" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#194#0" expanded="true" />
+            <marker date="1501663004848" expanded="true" signature="3076:3214" ph="CREATE TABLE... students" />
+            <marker date="1501663004848" expanded="true" signature="3765:3816" ph="SELECT fio, students" />
+            <marker date="1501663004848" expanded="true" signature="4269:4341" ph="INSERT INTO students... " />
+            <marker date="1501663004848" expanded="true" signature="4817:4839" ph="SELECT * FRO... students" />
+            <marker date="1501663004848" expanded="true" signature="5226:5347" ph="CREATE TABLE... payments" />
+            <marker date="1501663004848" expanded="true" signature="5803:5858" ph="SELECT id FR... payments" />
+            <marker date="1501663004848" expanded="true" signature="6943:7010" ph="INSERT INTO payments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="192" column="37" lean-forward="false" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="37" />
+          <folding>
+            <element signature="e#14#161#0" expanded="true" />
+            <marker date="1504519817252" expanded="true" signature="2098:2146" ph="SELECT name,... users" />
+            <marker date="1504519817252" expanded="true" signature="3208:3287" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>

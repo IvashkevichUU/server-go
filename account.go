@@ -190,7 +190,7 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 
 		p := Person{}
 		p.Name = username
-		p.Return = Websocket()
+		p.Return = Websocket(username)
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
@@ -209,7 +209,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 302)
 }
 
-func Websocket() string {
+func Websocket(account string) string {
 	origin := "http://localhost/"
 	url := "wss://bitshares.openledger.info/ws"
 	ws, err := websocket.Dial(url, "", origin)
@@ -218,7 +218,7 @@ func Websocket() string {
 	}
 	per := "{\"id\": 1, \"method\": \"call\", \"params\": [1, \"login\", [\"\", \"\"]]}"
 	per2 := "{\"id\": 2, \"method\": \"call\", \"params\": [1,\"database\",[]]}"
-	per3 := "{\"id\": 4, \"method\": \"call\", \"params\": [2,\"get_full_accounts\",[[\"verstack1-w\"], false]]}"
+	per3 := "{\"id\": 4, \"method\": \"call\", \"params\": [2,\"get_full_accounts\",[[\"" + account + "\"], false]]}"
 	if _, err := ws.Write([]byte(per)); err != nil {
 		log.Fatal(err)
 	}
