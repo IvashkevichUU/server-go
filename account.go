@@ -42,7 +42,7 @@ var sessions = map[string]string{}
 
 type Person struct {
 	Name   string
-	Return string
+	Return []string
 }
 
 func Register(w http.ResponseWriter, r *http.Request) {
@@ -209,7 +209,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 302)
 }
 
-func Websocket(account string) string {
+func Websocket(account string) []string {
 	origin := "http://localhost/"
 	url := "wss://bitshares.openledger.info/ws"
 	ws, err := websocket.Dial(url, "", origin)
