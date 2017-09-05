@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"github.com/lib/pq"
 	"golang.org/x/net/websocket"
@@ -42,7 +43,7 @@ var sessions = map[string]string{}
 
 type Person struct {
 	Name   string
-	Return []string
+	Return interface{}
 }
 
 func Register(w http.ResponseWriter, r *http.Request) {
@@ -190,7 +191,7 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 
 		p := Person{}
 		p.Name = username
-		p.Return = Websocket(username)
+		p.Return = json.Unmarshal(Websocket(username), &p.Return)
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
@@ -209,7 +210,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 302)
 }
 
-func Websocket(account string) []string {
+func Websocket(account string) []byte {
 	origin := "http://localhost/"
 	url := "wss://bitshares.openledger.info/ws"
 	ws, err := websocket.Dial(url, "", origin)
@@ -248,6 +249,6 @@ func Websocket(account string) []string {
 	mes3 := msg[:n]
 	fmt.Println(mes1, mes2)
 
-	return string(mes3[:])
+	return mes3
 
 }
