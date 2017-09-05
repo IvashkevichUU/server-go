@@ -192,6 +192,7 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		p := Person{}
 		p.Name = username
 		p.Return = json.Unmarshal(Websocket(username), &p.Return)
+		fmt.Println(p.Return)
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
