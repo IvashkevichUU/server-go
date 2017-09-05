@@ -189,10 +189,18 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		return
 	} else {
 
+		type test interface{}
+		var itest test
+		var jtest = Websocket(username)
+		err := json.Unmarshal(jtest, &itest)
+		if err != nil {
+			fmt.Println("error:", err)
+		}
+		fmt.Println(itest)
+
 		p := Person{}
 		p.Name = username
-		p.Return = json.Unmarshal(Websocket(username), &p.Return)
-		fmt.Println(p.Return)
+		p.Return = itest
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
