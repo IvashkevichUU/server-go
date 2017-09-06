@@ -49,6 +49,10 @@ type Person struct {
 	Lifetime_referrer_name string
 	Referrer_name          string
 	Registrar_name         string
+	Asset_type             string
+	Balance                int
+	CoinId                 string
+	Owner                  string
 }
 
 type Response struct {
@@ -57,7 +61,7 @@ type Response struct {
 	Result  [][]ResultTwoType `json:"result"`
 }
 type ResultOneType struct {
-	int           string `json:".result[0][0]"`
+	_             string `json:".result[0][0]"`
 	ResultTwoType `json:"result[0][1]"`
 }
 type ResultTwoType struct {
@@ -67,6 +71,13 @@ type ResultTwoType struct {
 	Referrer_name          string `json:"referrer_name"`
 	Registrar_name         string `json:"registrar_name"`
 	//Statistics             interface{} `json:"statistics"`
+	Balances []BalancesType `json:"balances"`
+}
+type BalancesType struct {
+	Asset_type string `json:"asset_type"`
+	Balance    int    `json:"balance"`
+	Id         string `json:"id"`
+	Owner      string `json:"owner"`
 }
 type AccountType struct {
 	Id      string      `json:"id"`
@@ -237,6 +248,10 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		p.Referrer_name = itest.Result[0][1].Referrer_name
 		p.Lifetime_referrer_name = itest.Result[0][1].Lifetime_referrer_name
 		p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
+		p.Asset_type = itest.Result[0][1].Balances[0].Asset_type
+		p.Balance = itest.Result[0][1].Balances[0].Balance
+		p.CoinId = itest.Result[0][1].Balances[0].Id
+		p.Owner = itest.Result[0][1].Balances[0].Owner
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
