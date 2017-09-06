@@ -67,7 +67,7 @@
                                 <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive">
 
                                     <input id="profile-image-upload" class="hidden" type="file">
-                                    <div style="color:#999;" >click here to change profile image</div>
+                                    <!--<div style="color:#999;" >click here to change profile image</div>-->
                                     <!--Upload Image Js And Css-->
 
 
@@ -112,7 +112,7 @@
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
-                            <div class="col-sm-5 col-xs-6 tital " >Memo key:</div><div class="col-sm-7">{{ .Memo_key }}</div>
+                            <div class="col-sm-5 col-xs-6 tital " >Memo key:</div><div class="col-sm-7"><pre>{{ .Memo_key }}</pre></div>
 
                             <!--<div class="clearfix"></div>-->
                             <!--<div class="bot-border"></div>-->
@@ -165,12 +165,12 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script>
-    $(function() {
-        $('#profile-image1').on('click', function() {
-            $('#profile-image-upload').click();
-        });
-    });
-</script>
+<!--<script>-->
+    <!--$(function() {-->
+        <!--$('#profile-image1').on('click', function() {-->
+            <!--$('#profile-image-upload').click();-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
