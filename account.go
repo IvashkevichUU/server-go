@@ -42,8 +42,38 @@ import (
 var sessions = map[string]string{}
 
 type Person struct {
-	Name   string
-	Return interface{}
+	Name                   string
+	Return                 interface{}
+	Id                     string
+	Memo_key               string
+	Lifetime_referrer_name string
+	Referrer_name          string
+	Registrar_name         string
+}
+
+type Response struct {
+	Id      int               `json:"id"`
+	Jsonrpc string            `json:"jsonrpc"`
+	Result  [][]ResultTwoType `json:"result"`
+}
+type ResultOneType struct {
+	int           string `json:".result[0][0]"`
+	ResultTwoType `json:"result[0][1]"`
+}
+type ResultTwoType struct {
+	Account AccountType `json:"account"`
+	//Assets                 []string    `json:"assets"`
+	Lifetime_referrer_name string `json:"lifetime_referrer_name"`
+	Referrer_name          string `json:"referrer_name"`
+	Registrar_name         string `json:"registrar_name"`
+	//Statistics             interface{} `json:"statistics"`
+}
+type AccountType struct {
+	Id      string      `json:"id"`
+	Options OptionsType `json:"options"`
+}
+type OptionsType struct {
+	Memo_key string `json:"memo_key"`
 }
 
 func Register(w http.ResponseWriter, r *http.Request) {
@@ -189,8 +219,9 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		return
 	} else {
 
-		type test interface{}
-		var itest test
+		//type test interface{}
+		//var itest test
+		var itest Response
 		var jtest = Websocket(username)
 		err := json.Unmarshal(jtest, &itest)
 		if err != nil {
@@ -201,6 +232,11 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		p := Person{}
 		p.Name = username
 		p.Return = itest
+		p.Id = itest.Result[0][1].Account.Id
+		p.Registrar_name = itest.Result[0][1].Registrar_name
+		p.Referrer_name = itest.Result[0][1].Referrer_name
+		p.Lifetime_referrer_name = itest.Result[0][1].Lifetime_referrer_name
+		p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
