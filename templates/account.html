@@ -171,7 +171,7 @@
                     <div class="box box-info">
 
                         <div class="box-body">
-
+                            {{ if .Asset_type }}
                             <div class="col-sm-5 col-xs-6 tital " >Asset type:</div><div class="col-sm-7 col-xs-6 ">{{ .Asset_type }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
@@ -187,7 +187,7 @@
                             <div class="col-sm-5 col-xs-6 tital " >Owner:</div><div class="col-sm-7 col-xs-6 ">{{ .Owner }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
-
+{{ end }}
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
