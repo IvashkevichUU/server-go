@@ -248,7 +248,8 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		p.Referrer_name = itest.Result[0][1].Referrer_name
 		p.Lifetime_referrer_name = itest.Result[0][1].Lifetime_referrer_name
 		p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
-		if itest.Result[0][1].Balances != nil {
+
+		if len(itest.Result[0][1].Balances) != 0 {
 			p.Asset_type = itest.Result[0][1].Balances[0].Asset_type
 			p.Balance = itest.Result[0][1].Balances[0].Balance
 			p.CoinId = itest.Result[0][1].Balances[0].Id
