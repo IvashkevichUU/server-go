@@ -167,7 +167,12 @@
             <div class="panel panel-default">
                 <div class="panel-heading">  <h4 >Balance</h4></div>
                 <div class="panel-body">
-                    {{ .Balances }}
+                    {{ range $key, $value := .Balances }}
+                    {{ $value.Asset_type }}
+                    {{ $value.Balance }}
+                    {{ $value.CoinId }}
+                    {{ $value.Owner }}
+                    {{ end }}
                     <div class="box box-info">
 
                         <div class="box-body">
