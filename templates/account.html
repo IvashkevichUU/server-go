@@ -167,29 +167,24 @@
             <div class="panel panel-default">
                 <div class="panel-heading">  <h4 >Balance</h4></div>
                 <div class="panel-body">
-                    {{ range $key, $value := .Balances }}
-                    {{ $value.Asset_type }}
-                    {{ $value.Balance }}
-                    {{ $value.Id }}
-                    {{ $value.Owner }}
-                    {{ end }}
+
                     <div class="box box-info">
 
                         <div class="box-body">
-                            {{ if .Asset_type }}
-                            <div class="col-sm-5 col-xs-6 tital " >Asset type:</div><div class="col-sm-7 col-xs-6 ">{{ .Asset_type }}</div>
+                            {{ range $key, $value := .Balances }}
+                            <div class="col-sm-5 col-xs-6 tital " >Asset type:</div><div class="col-sm-7 col-xs-6 ">{{ $value.Asset_type }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
-                            <div class="col-sm-5 col-xs-6 tital " >Balance:</div><div class="col-sm-7 col-xs-6 ">{{ .Balance }}</div>
+                            <div class="col-sm-5 col-xs-6 tital " >Balance:</div><div class="col-sm-7 col-xs-6 ">{{ $value.Balance }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
-                            <div class="col-sm-5 col-xs-6 tital " >CoinId:</div><div class="col-sm-7 col-xs-6 ">{{ .CoinId }}</div>
+                            <div class="col-sm-5 col-xs-6 tital " >CoinId:</div><div class="col-sm-7 col-xs-6 ">{{ $value.Id }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
-                            <div class="col-sm-5 col-xs-6 tital " >Owner:</div><div class="col-sm-7 col-xs-6 ">{{ .Owner }}</div>
+                            <div class="col-sm-5 col-xs-6 tital " >Owner:</div><div class="col-sm-7 col-xs-6 ">{{ $value.Owner }}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
                             {{ end }}

@@ -49,10 +49,6 @@ type Person struct {
 	Lifetime_referrer_name string
 	Referrer_name          string
 	Registrar_name         string
-	Asset_type             string
-	Balance                int
-	CoinId                 string
-	Owner                  string
 	Balances               []BalancesType
 }
 
@@ -251,12 +247,6 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
 		p.Balances = itest.Result[0][1].Balances
 
-		if len(itest.Result[0][1].Balances) != 0 {
-			p.Asset_type = itest.Result[0][1].Balances[0].Asset_type
-			p.Balance = itest.Result[0][1].Balances[0].Balance
-			p.CoinId = itest.Result[0][1].Balances[0].Id
-			p.Owner = itest.Result[0][1].Balances[0].Owner
-		}
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
 	}
