@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe455d6a-4e9e-4fa8-9f64-d63d4be3f685" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/account.html" afterPath="$PROJECT_DIR$/templates/account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.go" afterPath="$PROJECT_DIR$/account.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,7 +103,7 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4788">
+            <state relative-caret-position="126">
               <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
               <folding>
                 <element signature="e#14#194#0" expanded="true" />
@@ -119,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="130" column="37" lean-forward="false" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
+            <state relative-caret-position="369">
+              <caret line="85" column="53" lean-forward="true" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -194,15 +194,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3839">
-              <caret line="244" column="58" lean-forward="true" selection-start-line="244" selection-start-column="58" selection-end-line="244" selection-end-column="58" />
+            <state relative-caret-position="364">
+              <caret line="239" column="24" lean-forward="true" selection-start-line="239" selection-start-column="24" selection-end-line="239" selection-end-column="24" />
               <folding>
-                <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-                <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+                <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+                <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dec3kk9kc4v8vm.public.users" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -249,8 +264,8 @@
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/templates/css/stylesheet.css" />
-        <option value="$PROJECT_DIR$/account.go" />
         <option value="$PROJECT_DIR$/templates/account.html" />
+        <option value="$PROJECT_DIR$/account.go" />
       </list>
     </option>
   </component>
@@ -261,10 +276,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1448" />
-    <option name="y" value="-140" />
-    <option name="width" value="1456" />
-    <option name="height" value="886" />
+    <option name="x" value="-1928" />
+    <option name="y" value="66" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -483,14 +498,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1448" y="-140" width="1456" height="886" extended-state="6" />
+    <frame x="-1928" y="66" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28008595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21991403" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19506967" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1620186" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -512,7 +527,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v2.5" />
     <MESSAGE value="v2.6" />
     <MESSAGE value="v2.7" />
     <MESSAGE value="v2.8" />
@@ -537,7 +551,8 @@
     <MESSAGE value="v4.7" />
     <MESSAGE value="v4.8" />
     <MESSAGE value="v4.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="v4.9" />
+    <MESSAGE value="v5.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v5.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -551,8 +566,8 @@
         <state relative-caret-position="3114">
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-            <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+            <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+            <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -591,8 +606,8 @@
         <state relative-caret-position="3114">
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-            <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+            <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+            <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -643,8 +658,8 @@
         <state relative-caret-position="3294">
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
-            <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-            <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+            <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+            <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -683,8 +698,8 @@
         <state relative-caret-position="3348">
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
-            <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-            <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+            <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+            <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -963,35 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#194#0" expanded="true" />
-            <marker date="1501663004848" expanded="true" signature="3076:3214" ph="CREATE TABLE... students" />
-            <marker date="1501663004848" expanded="true" signature="3765:3816" ph="SELECT fio, students" />
-            <marker date="1501663004848" expanded="true" signature="4269:4341" ph="INSERT INTO students... " />
-            <marker date="1501663004848" expanded="true" signature="4817:4839" ph="SELECT * FRO... students" />
-            <marker date="1501663004848" expanded="true" signature="5226:5347" ph="CREATE TABLE... payments" />
-            <marker date="1501663004848" expanded="true" signature="5803:5858" ph="SELECT id FR... payments" />
-            <marker date="1501663004848" expanded="true" signature="6943:7010" ph="INSERT INTO payments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1010,24 +996,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3839">
-          <caret line="244" column="58" lean-forward="true" selection-start-line="244" selection-start-column="58" selection-end-line="244" selection-end-column="58" />
+        <state relative-caret-position="126">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
           <folding>
-            <marker date="1504773580476" expanded="true" signature="3336:3384" ph="SELECT name,... users" />
-            <marker date="1504773580476" expanded="true" signature="4446:4525" ph="INSERT INTO users... " />
+            <element signature="e#14#194#0" expanded="true" />
+            <marker date="1501663004848" expanded="true" signature="3076:3214" ph="CREATE TABLE... students" />
+            <marker date="1501663004848" expanded="true" signature="3765:3816" ph="SELECT fio, students" />
+            <marker date="1501663004848" expanded="true" signature="4269:4341" ph="INSERT INTO students... " />
+            <marker date="1501663004848" expanded="true" signature="4817:4839" ph="SELECT * FRO... students" />
+            <marker date="1501663004848" expanded="true" signature="5226:5347" ph="CREATE TABLE... payments" />
+            <marker date="1501663004848" expanded="true" signature="5803:5858" ph="SELECT id FR... payments" />
+            <marker date="1501663004848" expanded="true" signature="6943:7010" ph="INSERT INTO payments... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/23656990/b3ab6a28-f15c-4abe-80ab-12faa9b455b1/dec3kk9kc4v8vm.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="130" column="37" lean-forward="false" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
+        <state relative-caret-position="369">
+          <caret line="85" column="53" lean-forward="true" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="239" column="24" lean-forward="true" selection-start-line="239" selection-start-column="24" selection-end-line="239" selection-end-column="24" />
+          <folding>
+            <marker date="1505133899084" expanded="true" signature="3350:3398" ph="SELECT name,... users" />
+            <marker date="1505133899084" expanded="true" signature="4460:4539" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
