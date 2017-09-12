@@ -53,8 +53,8 @@
 <div class="container" style="margin-top: 51px;">
     <form action="/get_cookie" method="post" class="form-signin" role="form">
         <h2 class="form-signin-heading">Please Registration</h2>
-        <input type="text" name="login" class="form-control" placeholder="Name" required autofocus>
-        <label>{{ . }}</label>
+        <label for="user_name">{{ . }}</label>
+        <input type="text" name="login" id="user_name" class="form-control" placeholder="Name" required autofocus>
         <input type="email" name="Email" class="form-control" placeholder="E-mail" required autofocus>
         <input type="password" name="Password" class="form-control" placeholder="Password" required>
         <label class="checkbox">
