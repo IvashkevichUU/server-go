@@ -87,7 +87,7 @@ type OptionsType struct {
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
-	resp, _ := http.Get(r.RequestURI)
+	resp, _ := http.Get(r.URL.String())
 	fmt.Printf("Онлайн. http-статус: %d\n", resp.StatusCode)
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
