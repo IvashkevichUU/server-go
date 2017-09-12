@@ -87,10 +87,11 @@ type OptionsType struct {
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
-
+	resp, _ := http.Get(r.RequestURI)
+	fmt.Printf("Онлайн. http-статус: %d\n", resp.StatusCode)
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
-		fmt.Printf("Онлайн. http-статус: %d\n", r.Response.Status)
+
 		t.Execute(w, "active")
 		return
 	} else if err != nil {
@@ -183,7 +184,7 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 
 	if len(ValidUser.Result) < 1 {
 		fmt.Println("not found account in OpenLedger -> redirect to registration")
-		http.Redirect(w, r, "/registration", http.StatusSeeOther)
+		http.Redirect(w, r, "/registration", 303)
 		return
 	}
 
