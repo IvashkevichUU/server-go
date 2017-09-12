@@ -171,6 +171,21 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 
 	r.ParseForm()
 	inputLogin := r.Form["login"][0]
+
+	var ValidUser Response
+	var SendOpen = Websocket(inputLogin)
+	err := json.Unmarshal(SendOpen, &ValidUser)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Println(ValidUser)
+
+	if len(ValidUser.Result) < 1 {
+		fmt.Println("not found account in OpenLedger -> redirect to registration")
+		http.Redirect(w, r, "/registration", http.StatusSeeOther)
+		return
+	}
+
 	expiration := time.Now().Add(5 * time.Hour)
 
 	sessionID := RandStringRunes(32)
