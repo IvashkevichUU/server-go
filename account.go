@@ -87,16 +87,9 @@ type OptionsType struct {
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
-	_, err2 := r.Cookie("openledger_user")
 
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
-
-		if err2 != http.ErrNoCookie {
-
-			t.Execute(w, "not user, please registration in openledger.io")
-			return
-		}
 
 		t.Execute(w, "active")
 		return
