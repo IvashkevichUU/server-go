@@ -90,6 +90,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
+		fmt.Printf("Онлайн. http-статус: %d\n", r.Response.Status)
 		t.Execute(w, "active")
 		return
 	} else if err != nil {
