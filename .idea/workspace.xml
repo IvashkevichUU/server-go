@@ -187,12 +187,12 @@
       <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+            <state relative-caret-position="406">
+              <caret line="96" column="27" lean-forward="true" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
               <folding>
                 <element signature="e#14#178#0" expanded="true" />
-                <marker date="1505212275277" expanded="true" signature="3520:3568" ph="SELECT name,... users" />
-                <marker date="1505212275277" expanded="true" signature="5091:5170" ph="INSERT INTO users... " />
+                <marker date="1505212600549" expanded="true" signature="3489:3537" ph="SELECT name,... users" />
+                <marker date="1505212600549" expanded="true" signature="5060:5139" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -543,7 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v3.7" />
     <MESSAGE value="v3.8" />
     <MESSAGE value="v3.9" />
     <MESSAGE value="v4.0" />
@@ -568,7 +567,8 @@
     <MESSAGE value="v126" />
     <MESSAGE value="v127" />
     <MESSAGE value="v128" />
-    <option name="LAST_COMMIT_MESSAGE" value="v128" />
+    <MESSAGE value="v129" />
+    <option name="LAST_COMMIT_MESSAGE" value="v129" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,8 +624,8 @@
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505212275277" expanded="true" signature="3520:3568" ph="SELECT name,... users" />
-            <marker date="1505212275277" expanded="true" signature="5091:5170" ph="INSERT INTO users... " />
+            <marker date="1505212600549" expanded="true" signature="3489:3537" ph="SELECT name,... users" />
+            <marker date="1505212600549" expanded="true" signature="5060:5139" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -665,8 +665,8 @@
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505212275277" expanded="true" signature="3520:3568" ph="SELECT name,... users" />
-            <marker date="1505212275277" expanded="true" signature="5091:5170" ph="INSERT INTO users... " />
+            <marker date="1505212600549" expanded="true" signature="3489:3537" ph="SELECT name,... users" />
+            <marker date="1505212600549" expanded="true" signature="5060:5139" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -1038,12 +1038,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+        <state relative-caret-position="406">
+          <caret line="96" column="27" lean-forward="true" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505212275277" expanded="true" signature="3520:3568" ph="SELECT name,... users" />
-            <marker date="1505212275277" expanded="true" signature="5091:5170" ph="INSERT INTO users... " />
+            <marker date="1505212600549" expanded="true" signature="3489:3537" ph="SELECT name,... users" />
+            <marker date="1505212600549" expanded="true" signature="5060:5139" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
