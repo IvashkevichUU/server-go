@@ -92,7 +92,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
 
-		if sessions[openledgerUSER.Value] {
+		if openledgerUSER.Value == "false" {
 
 			t.Execute(w, "not user, please registration in openledger.io")
 			return
