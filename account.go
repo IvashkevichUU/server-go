@@ -87,10 +87,15 @@ type OptionsType struct {
 func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
-	resp, _ := http.Get(r.URL.String())
-	fmt.Printf("Онлайн. http-статус: %d\n", resp)
+	openledgerUSER, err := r.Cookie("openledger_user")
+
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
+
+		if sessions[openledgerUSER.Value] == "no" {
+			t.Execute(w, "notuser")
+			return
+		}
 
 		t.Execute(w, "active")
 		return
@@ -181,14 +186,14 @@ func GetCookie(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("error:", err)
 	}
 	fmt.Println(ValidUser)
-
+	expiration := time.Now().Add(5 * time.Hour)
 	if len(ValidUser.Result) < 1 {
 		fmt.Println("not found account in OpenLedger -> redirect to registration")
+		cookie := http.Cookie{Name: "openledger_user", Value: "false", Expires: expiration}
+		http.SetCookie(w, &cookie)
 		http.Redirect(w, r, "/registration", 303)
 		return
 	}
-
-	expiration := time.Now().Add(5 * time.Hour)
 
 	sessionID := RandStringRunes(32)
 	sessions[sessionID] = inputLogin
