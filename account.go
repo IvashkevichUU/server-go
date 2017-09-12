@@ -50,7 +50,6 @@ type Person struct {
 	Referrer_name          string
 	Registrar_name         string
 	Balances               []BalancesType
-	Res                    Response
 }
 
 type Response struct {
@@ -227,21 +226,26 @@ func Accounts(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/logout", http.StatusFound)
 		return
 	} else {
-		p := Person{}
 
-		err := json.Unmarshal(Websocket(username), &p.Res)
+		//type test interface{}
+		//var itest test
+		var itest Response
+		var jtest = Websocket(username)
+		err := json.Unmarshal(jtest, &itest)
 		if err != nil {
 			fmt.Println("error:", err)
 		}
+		fmt.Println(itest)
 
+		p := Person{}
 		p.Name = username
-		p.Return = p.Res
-		//p.Id = itest.Result[0][1].Account.Id
-		//p.Registrar_name = itest.Result[0][1].Registrar_name
-		//p.Referrer_name = itest.Result[0][1].Referrer_name
-		//p.Lifetime_referrer_name = itest.Result[0][1].Lifetime_referrer_name
-		//p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
-		//p.Balances = itest.Result[0][1].Balances
+		p.Return = itest
+		p.Id = itest.Result[0][1].Account.Id
+		p.Registrar_name = itest.Result[0][1].Registrar_name
+		p.Referrer_name = itest.Result[0][1].Referrer_name
+		p.Lifetime_referrer_name = itest.Result[0][1].Lifetime_referrer_name
+		p.Memo_key = itest.Result[0][1].Account.Options.Memo_key
+		p.Balances = itest.Result[0][1].Balances
 
 		t, _ := template.ParseFiles("templates/account.html")
 		t.Execute(w, p)
