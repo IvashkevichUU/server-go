@@ -187,12 +187,12 @@
       <file leaf-file-name="account.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+            <state relative-caret-position="234">
+              <caret line="88" column="44" lean-forward="true" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
               <folding>
                 <element signature="e#14#178#0" expanded="true" />
-                <marker date="1505208416549" expanded="true" signature="3431:3479" ph="SELECT name,... users" />
-                <marker date="1505208416549" expanded="true" signature="4889:4968" ph="INSERT INTO users... " />
+                <marker date="1505208482776" expanded="true" signature="3420:3468" ph="SELECT name,... users" />
+                <marker date="1505208482776" expanded="true" signature="4878:4957" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -522,7 +522,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19521913" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22228146" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19506967" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19506967" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1620186" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -543,7 +543,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v3.1" />
     <MESSAGE value="v3.2" />
     <MESSAGE value="v3.3" />
     <MESSAGE value="v3.4" />
@@ -568,7 +567,8 @@
     <MESSAGE value="v120" />
     <MESSAGE value="v121" />
     <MESSAGE value="v122" />
-    <option name="LAST_COMMIT_MESSAGE" value="v122" />
+    <MESSAGE value="v123" />
+    <option name="LAST_COMMIT_MESSAGE" value="v123" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,8 +624,8 @@
           <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505208416549" expanded="true" signature="3431:3479" ph="SELECT name,... users" />
-            <marker date="1505208416549" expanded="true" signature="4889:4968" ph="INSERT INTO users... " />
+            <marker date="1505208482776" expanded="true" signature="3420:3468" ph="SELECT name,... users" />
+            <marker date="1505208482776" expanded="true" signature="4878:4957" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -665,8 +665,8 @@
           <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505208416549" expanded="true" signature="3431:3479" ph="SELECT name,... users" />
-            <marker date="1505208416549" expanded="true" signature="4889:4968" ph="INSERT INTO users... " />
+            <marker date="1505208482776" expanded="true" signature="3420:3468" ph="SELECT name,... users" />
+            <marker date="1505208482776" expanded="true" signature="4878:4957" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -1038,12 +1038,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+        <state relative-caret-position="234">
+          <caret line="88" column="44" lean-forward="true" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
           <folding>
             <element signature="e#14#178#0" expanded="true" />
-            <marker date="1505208416549" expanded="true" signature="3431:3479" ph="SELECT name,... users" />
-            <marker date="1505208416549" expanded="true" signature="4889:4968" ph="INSERT INTO users... " />
+            <marker date="1505208482776" expanded="true" signature="3420:3468" ph="SELECT name,... users" />
+            <marker date="1505208482776" expanded="true" signature="4878:4957" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>

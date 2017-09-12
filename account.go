@@ -88,7 +88,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	sessionID, err := r.Cookie("session_id")
 	resp, _ := http.Get(r.URL.String())
-	fmt.Printf("Онлайн. http-статус: %d\n", resp.StatusCode)
+	fmt.Printf("Онлайн. http-статус: %d\n", resp)
 	if err == http.ErrNoCookie || sessions[sessionID.Value] == "" {
 		t, _ := template.ParseFiles("templates/registration.html")
 
