@@ -12,18 +12,20 @@
     <meta name="author" content="spinner">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+       	 <div class="container">
 
-	        <div class="container">
+           	 <div class="row">
 
-	            <div class="row">
+					<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
 
-		            <a class="navbar-brand" href="#" role="banner">Spinner</a>
+
+
+            				<a class="navbar-brand" href="#" role="banner">Spinner</a>
 
 		            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Переключить навигацию">
 		                <span class="navbar-toggler-icon"></span>
@@ -109,6 +111,8 @@
                                             <h3>Up to 10$ room</h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
+                                            <h2>End round in <span class="badge badge-secondary">3</span><span class="badge badge-secondary">0</span> seconds</h2>
+
                                             <div class="progress" style="height: 40px;">
                                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Mark</div>
                                                 <div class="progress-bar bg-success  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Jacob</div>
@@ -119,7 +123,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputBet1">Print your bet:</label>
                                                     <input type="bet" class="form-control" id="exampleInputBet1" aria-describedby="betHelp" placeholder="Up to 10$">
-                                                    <small id="betHelp" class="form-text text-muted">Lorem ipsum dolor sit amet, consecte</small>
+                                                    <small id="betHelp" class="form-text text-muted">+</small>
                                                 </div>
 
                                                 <button type="buttont" class="btn btn-primary">Make bet</button>
@@ -256,28 +260,17 @@
 
 
     <div id="how-to-play" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
       <div class="modal-dialog modal-lg">
+
         <div class="modal-content">
 
             <div class="container-fluid">
 
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-12">
 
-
-                    <div id="list-example" class="list-group">
-                      <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-                      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-                      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-                    </div>
-
-                </div>
-
-                <div class="col-md-9">
-
-                    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
                       <h4 id="list-item-1">Item 1</h4>
                       <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
                       <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
@@ -298,7 +291,7 @@
                       <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
                       <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
                       <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
-                    </div>
+                    
                 </div>
 
             </div>
@@ -309,12 +302,14 @@
 
     </div>
 
+</div>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-<script src="/js/custom.js"></script>
+<script src="js/custom.js"></script>
 
 </html>
