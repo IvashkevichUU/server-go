@@ -8,10 +8,10 @@ $(function(){
 //Timer
 var secondOne = $('.sec-one').text();
 var secondTwo = $('.sec-two').text();
-var int = setInterval(function() { // запускаем интервал
+var int = setInterval(function() {
   if (secondTwo > 0) {
-    secondTwo--; // вычитаем 1
-    $('.sec-two').text(secondTwo); // выводим получившееся значение в блок
+    secondTwo--;
+    $('.sec-two').text(secondTwo);
   } else {
   	if (secondOne > 0) {
   		secondOne--;
@@ -21,9 +21,7 @@ var int = setInterval(function() { // запускаем интервал
   	} else {
   		$('.sec-one').text(secondOne);
   		$('.sec-two').text(secondTwo);
-
-  		learInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0c
+  		clearInterval(int); 
   	}
-
   }
 }, 1000);
