@@ -124,3 +124,4 @@ var progressPlayers = progressArrow.next().children('.progress-bar');
   }, 100);
 
 };
+
