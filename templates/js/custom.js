@@ -59,7 +59,7 @@ spinnerChangeName();
                     }, 2500, function () {
                         $(this).css("background", "red");
                         clearInterval(changeName);
-                        $('.round-tittle').text('Winner: '+$('.round-tittle').text());
+                        $('.round-tittle').text($('.round-tittle').text() + ' wins $16.49');
                     });
                 });
             });
