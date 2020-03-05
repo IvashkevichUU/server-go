@@ -27,21 +27,25 @@ html {
 }
 
 .spinner-arrow {
-    position: absolute;
-    display: none;
+  position: absolute;
+  display: none;
 }
 .spinner-arrow:after {
-    content: '';
-    position: absolute;
-    display: block;
-    margin-top: 0;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    border-top: 0.5em solid #fff;
-    border-right: 0.5em solid transparent;
-    border-bottom: 0;
-    border-left: 0.5em solid transparent;
+  content: '';
+  position: absolute;
+  display: block;
+  margin-top: 0;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 0.5em solid #fff;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0;
+  border-left: 0.5em solid transparent;
+}
+
+.progress-bar {
+  word-break: break-all;
 }
 
 .progress-container {

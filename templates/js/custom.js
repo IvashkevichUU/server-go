@@ -52,6 +52,9 @@ var inGameProgress = function() {
 
 //Spinner anim
 var spinnerAnimation = function() {
+
+  $( ".make-bet" ).slideUp();
+
 var widthProgress = $('.progress').width();
 var progressStop = $('.progress .bg-success');
 var widthProgressStop = Math.floor(Math.random() * 100) + 1;
@@ -84,6 +87,7 @@ spinnerChangeName();
                         window.setTimeout(function(){
                             //$('.progress').empty();
                             inGame = false;
+                            $( ".make-bet" ).slideDown();
                         },3000);
 
                     });
@@ -126,7 +130,7 @@ var progressPlayers = progressArrow.next().children('.progress-bar');
 $( ".make-bet" ).on( "click", function(e) {
   e.preventDefault();
 
-  if (inGame == true) {
+  if (inGame == true || currentPlayerData.length == 0) {
 
     betPlayer = parseInt($('#exampleInputBet1').val());
     currentID = p;
@@ -135,6 +139,10 @@ $( ".make-bet" ).on( "click", function(e) {
     currentPlayerData.push({id:currentID,name:currentName,room:1,game:1,bet:betPlayer,rate:8,color:currentColor});
 
     totalPrizeRoundAndProcent();
+
+    if (inGame == false) {
+      inGameProgress();
+    }
 
   } else {
 
@@ -152,7 +160,7 @@ $('.progress').empty();
 $('.table-current-game tbody').empty();
 for(key in currentPlayerData) {
   p++;
-  var strTable = "<tr><th scope='row'>"+p+"</th><td>"+currentPlayerData[key].name+"</td><td>"+currentPlayerData[key].bet+"</td><td>"+currentPlayerData[key].rate+"</td></tr>";
+  var strTable = "<tr><th scope='row'>"+p+"</th><td>"+currentPlayerData[key].name+"</td><td>$"+currentPlayerData[key].bet+"</td><td>"+currentPlayerData[key].rate+"%</td></tr>";
   var strProgress = "<div class='progress-bar' role='progressbar' style='width: "+currentPlayerData[key].rate+"%;background-color:"+currentPlayerData[key].color+"' aria-valuenow='"+currentPlayerData[key].rate+"' aria-valuemin='0' aria-valuemax='100'>"+currentPlayerData[key].name+"</div>";
 
   $('.progress').append(strProgress);
