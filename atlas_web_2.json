@@ -1,0 +1,21 @@
+{"frames": {
+
+"background.jpg":
+{
+	"frame": {"x":0,"y":0,"w":1390,"h":640},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1390,"h":640},
+	"sourceSize": {"w":1390,"h":640}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "atlas_web_2.png",
+	"format": "RGBA8888",
+	"size": {"w":1390,"h":640},
+	"scale": "1",
+	"related_multi_packs": [ "atlas_web_0.json", "atlas_web_1.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:9007e104bba7bcc4c9bcd54821f79c99:da33476c4fa46079149776ad2cca8bde:ca60a62dd7d629661c178e7184e2fc58$"
+}
+}
