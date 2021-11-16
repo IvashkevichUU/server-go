@@ -1,0 +1,48 @@
+{"frames": {
+
+"ladder_0.png":
+{
+	"frame": {"x":0,"y":0,"w":557,"h":516},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":557,"h":516},
+	"sourceSize": {"w":557,"h":516}
+},
+"ladder_1.png":
+{
+	"frame": {"x":0,"y":616,"w":482,"h":615},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":482,"h":615},
+	"sourceSize": {"w":482,"h":615}
+},
+"ladder_2.png":
+{
+	"frame": {"x":482,"y":616,"w":492,"h":612},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":492,"h":612},
+	"sourceSize": {"w":492,"h":612}
+},
+"ladder_3.png":
+{
+	"frame": {"x":557,"y":0,"w":480,"h":616},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":480,"h":616},
+	"sourceSize": {"w":480,"h":616}
+}},
+"animations": {
+	"ladder": ["ladder_0.png","ladder_1.png","ladder_2.png","ladder_3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "atlas_web_1.png",
+	"format": "RGBA8888",
+	"size": {"w":1037,"h":1231},
+	"scale": "1",
+	"related_multi_packs": [ "atlas_web_0.json", "atlas_web_2.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:9007e104bba7bcc4c9bcd54821f79c99:da33476c4fa46079149776ad2cca8bde:ca60a62dd7d629661c178e7184e2fc58$"
+}
+}
