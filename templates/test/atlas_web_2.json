@@ -11,7 +11,7 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "atlas_web_2.png",
+	"image": "https://fierce-island-83906.herokuapp.com/test/atlas_web_2.png",
 	"format": "RGBA8888",
 	"size": {"w":1390,"h":640},
 	"scale": "1",
